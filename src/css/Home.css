@@ -26,7 +26,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 60vh;
   gap: 4rem;
   padding-top: 60px;
 }
