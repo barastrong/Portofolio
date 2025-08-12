@@ -6,7 +6,6 @@ import { FaReact, FaLaravel } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
 import { SiMysql } from 'react-icons/si';
 
-// Impor data dan komponen yang dibutuhkan
 import projectsData from '../data/projectData';
 import certificateData from '../data/certificateData';
 import ProjectCard from '../components/ProjectCard';
