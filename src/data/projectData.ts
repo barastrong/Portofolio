@@ -1,4 +1,7 @@
 import PigFilter from '../assets/images/pigFilter.png';
+import Epicurean from '../assets/images/epicurean.png';
+import NeoManga from '../assets/images/NeoManga.png';
+import BintangArga from '../assets/images/argabintang.png';
 
 export interface ProjectData {
   title: string;
@@ -9,6 +12,8 @@ export interface ProjectData {
   slug: string;
   github: string;
   tags: string[];
+  fitures?: string[];
+  type?: string[];
 }
 
 const projectsData: ProjectData[] = [
@@ -18,40 +23,74 @@ const projectsData: ProjectData[] = [
     longDesc: 'Platform e-commerce ini dibangun dari awal menggunakan Laravel untuk backend API dan React untuk frontend yang dinamis. Fitur utama termasuk otentikasi pengguna, katalog produk dengan pencarian dan filter, manajemen keranjang belanja, dan integrasi dengan gateway pembayaran untuk proses checkout yang aman.',
     image: PigFilter,
     date: 'Agutus 2025',
-    slug: 'platform-e-commerce',
+    slug: 'pig-face-filter',
     github: '',
-    tags: ['Python', 'AI', 'Machine Learning']
+    tags: ['Python', 'AI', 'Machine Learning'],
+    fitures: ['AI Image Processing', 'Real-time Face Detection', 'Interactive User Interface']
   },
   {
-    title: 'Aplikasi Task Manager',
-    shortDesc: 'Aplikasi berbasis web untuk mengatur tugas harian dengan fitur drag-and-drop dan notifikasi.',
-    longDesc: 'Aplikasi ini dirancang untuk membantu pengguna mengelola tugas mereka secara efisien. Menggunakan React dengan state management yang canggih, aplikasi ini memiliki antarmuka drag-and-drop intuitif untuk memindahkan tugas antar kolom (misalnya, "To Do", "In Progress", "Done"). Notifikasi real-time diimplementasikan untuk pengingat tenggat waktu.',
-    image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&q=80',
-    date: 'Oktober 2023',
-    slug: 'aplikasi-task-manager',
-    github: 'https://github.com/bintang-bara-adyasta',
-    tags: ['React', 'Node.js', 'MongoDB', 'WebSocket']
-  },
-  {
-    title: 'Sistem Reservasi Hotel',
+      title: 'NeoManga Website',
     shortDesc: 'Aplikasi untuk booking kamar hotel dengan kalender interaktif dan manajemen pemesanan.',
     longDesc: 'Sebuah sistem lengkap untuk reservasi hotel, memungkinkan tamu untuk melihat ketersediaan kamar secara real-time melalui kalender interaktif. Admin dapat mengelola kamar, harga, dan pemesanan melalui dasbor khusus. Dibangun dengan Laravel dan Vue.js untuk menciptakan pengalaman pengguna yang mulus dan responsif.',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80',
-    date: 'Agustus 2023',
-    slug: 'sistem-reservasi-hotel',
-    github: 'https://github.com/bintang-bara-adyasta',
-    tags: ['Laravel', 'Vue.js', 'MySQL', 'Admin Panel']
+    image: NeoManga,
+    date: 'Juni 2025',
+    slug: 'Neo-Manga',
+    github: 'https://github.com/barastrong/NeoManga',
+    tags: ['Laravel', 'Tailwind', 'MySQL'],
+    fitures: ['Free Manga Reading','History','User Authentifikasi', 'Bookmark']
   },
   {
-    title: 'Website Portofolio Fotografi',
-    shortDesc: 'Galeri foto dinamis dan elegan untuk menampilkan karya-karya seorang fotografer profesional.',
+      title: 'Website shoope palsu',
+      shortDesc: 'Galeri foto dinamis dan elegan untuk menampilkan karya-karya seorang fotografer profesional.',
     longDesc: 'Portofolio visual yang menakjubkan ini menggunakan React dan Framer Motion untuk membuat animasi yang halus dan transisi halaman yang elegan. Website ini sepenuhnya responsif, memastikan galeri foto terlihat sempurna di semua perangkat. Ada sistem manajemen konten sederhana bagi fotografer untuk mengunggah dan mengatur karya mereka.',
-    image: 'https://images.unsplash.com/photo-1512295767273-b684ac7658fa?w=800&q=80',
-    date: 'Juni 2023',
-    slug: 'website-portofolio-fotografi',
-    github: 'https://github.com/bintang-bara-adyasta',
+    image: BintangArga,
+    date: 'Juni 2025',
+    slug: 'web-shoope',
+    github: 'https://github.com/barastrong/bintangarga',
+    tags: ['Laravel', 'Tailwind', 'MySQL'],
+    fitures: ['Responsive Design', 'Image Gallery', 'Content Management System', 'Seller Dashboard', 'User Authentication', 'Delivery Dashboard', 'Product Management', 'Order Management', 'Seller Aproval System', 'User Reviews', 'Seller Approval System', 'province and city filters', 'Product Search']
+},
+{
+      title: 'Website shoope palsu',
+      shortDesc: 'Galeri foto dinamis dan elegan untuk menampilkan karya-karya seorang fotografer profesional.',
+    longDesc: 'Portofolio visual yang menakjubkan ini menggunakan React dan Framer Motion untuk membuat animasi yang halus dan transisi halaman yang elegan. Website ini sepenuhnya responsif, memastikan galeri foto terlihat sempurna di semua perangkat. Ada sistem manajemen konten sederhana bagi fotografer untuk mengunggah dan mengatur karya mereka.',
+    image: BintangArga,
+    date: 'Juni 2025',
+    slug: 'web-shoope',
+    github: 'https://github.com/barastrong/bintangarga',
     tags: ['React', 'Framer Motion', 'UI/UX']
-  },
+},
+{
+      title: 'Website shoope palsu',
+      shortDesc: 'Galeri foto dinamis dan elegan untuk menampilkan karya-karya seorang fotografer profesional.',
+    longDesc: 'Portofolio visual yang menakjubkan ini menggunakan React dan Framer Motion untuk membuat animasi yang halus dan transisi halaman yang elegan. Website ini sepenuhnya responsif, memastikan galeri foto terlihat sempurna di semua perangkat. Ada sistem manajemen konten sederhana bagi fotografer untuk mengunggah dan mengatur karya mereka.',
+    image: BintangArga,
+    date: 'Juni 2025',
+    slug: 'web-shoope',
+    github: 'https://github.com/barastrong/bintangarga',
+    tags: ['React', 'Framer Motion', 'UI/UX']
+},
+{
+  title: 'Aplikasi Epicurean',
+  shortDesc: 'Aplikasi berbasis web untuk mengatur tugas harian dengan fitur drag-and-drop dan notifikasi.',
+  longDesc: 'Aplikasi ini dirancang untuk membantu pengguna mengelola tugas mereka secara efisien. Menggunakan React dengan state management yang canggih, aplikasi ini memiliki antarmuka drag-and-drop intuitif untuk memindahkan tugas antar kolom (misalnya, "To Do", "In Progress", "Done"). Notifikasi real-time diimplementasikan untuk pengingat tenggat waktu.',
+  image: Epicurean,
+  date: 'Januari 2025',
+  slug: 'aplikasi-task-manager',
+  github: 'https://github.com/bintang-bara-adyasta',
+  tags: ['React Native', 'Firebase'],
+  fitures: ['Real-time Database', 'User authentification','Category database', 'Search product', 'Product table']
+},
+{
+      title: 'Website Informasi',
+      shortDesc: 'Galeri foto dinamis dan elegan untuk menampilkan karya-karya seorang fotografer profesional.',
+    longDesc: 'Portofolio visual yang menakjubkan ini menggunakan React dan Framer Motion untuk membuat animasi yang halus dan transisi halaman yang elegan. Website ini sepenuhnya responsif, memastikan galeri foto terlihat sempurna di semua perangkat. Ada sistem manajemen konten sederhana bagi fotografer untuk mengunggah dan mengatur karya mereka.',
+    image: BintangArga,
+    date: 'Juni 2025',
+    slug: 'web-shoope',
+    github: 'https://github.com/barastrong/bintangarga',
+    tags: ['Expo', 'Tailwind', 'Firebase']
+},
 ];
 
 // Ekspor data sebagai default
