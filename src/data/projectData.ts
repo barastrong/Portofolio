@@ -1,5 +1,5 @@
 import PigFilter from '../assets/images/pigFilter.png';
-import Epicurean from '../assets/images/epicurean.png';
+import Epicurean from '../assets/images/Epicurean.png';
 import NeoManga from '../assets/images/NeoManga.png';
 import BintangArga from '../assets/images/argabintang.png';
 
