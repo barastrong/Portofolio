@@ -2,9 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
-import { FaReact, FaGithub, FaLaravel } from 'react-icons/fa';
+import { FaReact, FaLaravel } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
-import {  SiMysql } from 'react-icons/si';
+import { SiMysql } from 'react-icons/si';
+
+import projectsData from '../data/projectData';
+import ProjectCard from '../components/ProjectCard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -98,44 +101,13 @@ const Home: React.FC = () => {
       >
         <h2 className="section-title">Proyek <span>Terbaru</span></h2>
         <motion.div className="projects-grid" variants={containerVariants}>
-          {[
-            {
-              title: 'Platform E-Commerce',
-              desc: 'Situs jual beli fungsional dengan manajemen produk, keranjang belanja, dan sistem pembayaran.',
-              img: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2Vic2l0ZSxlY29tbWVyY2V8fHx8fHwxNjc5NTI1MDU0&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
-              slug: 'platform-e-commerce',
-              github: 'https://github.com/bintang-bara-adyasta',
-            },
-            {
-              title: 'Aplikasi Task Manager',
-              desc: 'Aplikasi berbasis web untuk mengatur tugas harian dengan fitur drag-and-drop dan notifikasi.',
-              img: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2Vic2l0ZSx0YXNrLWFwcHx8fHx8fDE2Nzk1MjUwNzk&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080',
-              slug: 'aplikasi-task-manager',
-              github: 'https://github.com/bintang-bara-adyasta',
-            },
-          ].map(project => (
-            <motion.div className="project-card" key={project.title} variants={itemVariants}>
-              <img src={project.img} alt={project.title} />
-              <div className="project-content">
-                <h3>{project.title}</h3>
-                <p>{project.desc}</p>
-                <div className="project-links">
-                  <Link to={`/project/${project.slug}`} className="btn btn-primary">Detail</Link>
-                  <a href={project.github} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                    <FaGithub /> GitHub
-                  </a>
-                </div>
-              </div>
-            </motion.div>
+          {projectsData.slice(0, 3).map(project => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              variants={itemVariants}
+            />
           ))}
-        </motion.div>
-        <motion.div 
-          className="view-all-projects"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-        >
-          <Link to="/project" className="btn btn-secondary">Lihat Semua Proyek</Link>
         </motion.div>
       </motion.section>
     </motion.div>

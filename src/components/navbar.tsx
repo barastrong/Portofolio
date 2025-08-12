@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import '../css/navbar.css';
 import { 
   FaHome, 
-  FaTh,
-  FaCog,
-  FaProjectDiagram,
+  FaListUl,
+  FaAward,
+  FaLaptopCode,
   FaUserCircle 
 } from 'react-icons/fa';
 
@@ -18,9 +18,9 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { path: '/', label: 'Home', Icon: FaHome },
-  { path: '/menu', label: 'Menu', Icon: FaTh },
-  { path: '/sertifikat', label: 'Sertifikat', Icon: FaCog }, 
-  { path: '/project', label: 'Project', Icon: FaProjectDiagram },
+  { path: '/menu', label: 'Menu', Icon: FaListUl  },
+  { path: '/sertifikat', label: 'Sertifikat', Icon: FaAward  }, 
+  { path: '/project', label: 'Project', Icon: FaLaptopCode  },
   { path: '/profile', label: 'Profile', Icon: FaUserCircle },
 ];
 
