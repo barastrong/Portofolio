@@ -1,0 +1,207 @@
+body {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+.page-section {
+  padding: 6rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: #ffffff;
+}
+
+.section-title span {
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 4rem;
+  padding-top: 60px;
+}
+
+.hero-content {
+  flex-basis: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  color: #ffffff;
+}
+.hero-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #38bdf8;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  max-width: 600px;
+}
+.hero-buttons {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.btn-primary {
+  background-color: #38bdf8;
+  color: #111827;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+.btn-primary:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #374151;
+}
+.btn-secondary:hover {
+  background-color: #1f2937;
+  border-color: #9ca3af;
+  transform: translateY(-2px);
+}
+.hero-image-wrapper {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-image {
+  width: clamp(250px, 100%, 380px);
+  height: clamp(250px, 100%, 380px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 60px rgba(56, 189, 248, 0.4);
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.skill-card {
+  background-color: #1f2937;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 150px;
+  border: 1px solid #374151;
+}
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: #38bdf8;
+}
+.skill-card svg {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.skill-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+.project-card {
+  background: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 2px solid #38bdf8;
+}
+.project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+.project-content p {
+  color: #d1d5db;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.view-all-projects {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    min-height: auto;
+    padding-top: 120px;
+    gap: 3rem;
+  }
+  .skill-card {
+    width: 120px;
+  }
+}

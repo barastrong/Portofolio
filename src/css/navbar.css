@@ -1,0 +1,73 @@
+:root {
+  --navbar-bg: #1f2937;
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --icon-color-default: #9ca3af;
+  --icon-color-hover: #ffffff;
+  --icon-bg-active: rgba(255, 255, 255, 0.08);
+}
+
+.navbar {
+  background-color: var(--navbar-bg);
+  width: 100%;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.navbar-title a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--icon-color-hover);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-title a:hover {
+  color: var(--icon-color-default);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-menu a {
+  color: var(--icon-color-default);
+  font-size: 1.4rem;
+  display: flex;
+  padding: 0.6rem;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-menu a:hover {
+  color: var(--icon-color-hover);
+  transform: scale(1.1);
+}
+
+.navbar-menu a.active {
+  color: var(--icon-color-hover);
+  background-color: var(--icon-bg-active);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .navbar-title {
+    display: none;
+  }
+
+  .navbar-menu {
+    gap: 1.25rem;
+  }
+}
