@@ -1,4 +1,4 @@
-import PigFilter from '../assets/images/PigFilter.png';
+import PigFilter from '../assets/images/pigFilter.png';
 
 export interface ProjectData {
   title: string;
