@@ -109,6 +109,15 @@ const Home: React.FC = () => {
             />
           ))}
         </motion.div>
+        <motion.div 
+          className="view-all-projects"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <Link to="/project" className="btn btn-secondary">Lihat Semua Proyek</Link>
+        </motion.div>
       </motion.section>
     </motion.div>
   );
