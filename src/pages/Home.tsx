@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
-import { FaReact, FaNodeJs, FaGithub, FaLaravel } from 'react-icons/fa';
+import { FaReact, FaGithub, FaLaravel } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
-import { SiTypescript, SiMysql } from 'react-icons/si';
+import {  SiMysql } from 'react-icons/si';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -21,7 +21,7 @@ const itemVariants = {
     opacity: 1,
     transition: { type: 'spring', stiffness: 120 },
   },
-};
+} as const;
 
 const imageVariants = {
   hidden: { scale: 0.5, opacity: 0 },
@@ -30,7 +30,7 @@ const imageVariants = {
     opacity: 1,
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
-};
+} as const;
 
 const Home: React.FC = () => {
   return (

@@ -6,6 +6,7 @@ import Menu from './pages/Menu';
 import Sertifikat from './pages/Sertifikat';
 import Project from './pages/Project';
 import Profile from './pages/Profile';
+import Footer from './components/footer';
 
 import './css/App.css';
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

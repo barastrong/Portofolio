@@ -19,7 +19,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { path: '/', label: 'Home', Icon: FaHome },
   { path: '/menu', label: 'Menu', Icon: FaTh },
-  { path: '/sertifikat', label: 'Sertifikat', Icon: FaCog },
+  { path: '/sertifikat', label: 'Sertifikat', Icon: FaCog }, 
   { path: '/project', label: 'Project', Icon: FaProjectDiagram },
   { path: '/profile', label: 'Profile', Icon: FaUserCircle },
 ];
@@ -29,15 +29,19 @@ const navbarVariants = {
   visible: { 
     y: 0, 
     opacity: 1, 
-    transition: { duration: 0.5, ease: "easeOut" } 
+    transition: { 
+      duration: 0.5, 
+      ease: "easeOut",
+      delayChildren: 0.3 
+    } 
   },
-};
+} as const;
 
 const menuContainerVariants = {
+  hidden: {}, 
   visible: {
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2,
     },
   },
 };
