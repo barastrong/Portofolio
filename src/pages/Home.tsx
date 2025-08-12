@@ -6,8 +6,11 @@ import { FaReact, FaLaravel } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
 import { SiMysql } from 'react-icons/si';
 
+// Impor data dan komponen yang dibutuhkan
 import projectsData from '../data/projectData';
+import certificateData from '../data/certificateData';
 import ProjectCard from '../components/ProjectCard';
+import CertificateCard from '../components/CertificateCard';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -99,6 +102,33 @@ const Home: React.FC = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
       >
+        <h2 className="section-title">Sertifikasi <span>Terbaru</span></h2>
+        <motion.div className="projects-grid" variants={containerVariants}>
+          {certificateData.slice(0, 3).map(cert => (
+            <CertificateCard
+              key={cert.title}
+              certificate={cert}
+              variants={itemVariants}
+            />
+          ))}
+        </motion.div>
+        <motion.div 
+          className="view-all-projects"
+          whileInView={{ opacity: [0, 1] }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+        >
+          <Link to="/sertifikat" className="btn btn-secondary">Lihat Semua Sertifikasi</Link>
+        </motion.div>
+      </motion.section>
+      
+      <motion.section 
+        className="page-section"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.5 }}
+      >
         <h2 className="section-title">Proyek <span>Terbaru</span></h2>
         <motion.div className="projects-grid" variants={containerVariants}>
           {projectsData.slice(0, 3).map(project => (
@@ -111,8 +141,7 @@ const Home: React.FC = () => {
         </motion.div>
         <motion.div 
           className="view-all-projects"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={{ opacity: [0, 1] }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5 }}
         >

@@ -1,3 +1,5 @@
+import PigFilter from '../assets/images/PigFilter.png';
+
 export interface ProjectData {
   title: string;
   shortDesc: string;
@@ -11,14 +13,14 @@ export interface ProjectData {
 
 const projectsData: ProjectData[] = [
   {
-    title: 'Platform E-Commerce',
+    title: 'Pig Face Filter',
     shortDesc: 'Situs jual beli fungsional dengan manajemen produk, keranjang belanja, dan sistem pembayaran.',
     longDesc: 'Platform e-commerce ini dibangun dari awal menggunakan Laravel untuk backend API dan React untuk frontend yang dinamis. Fitur utama termasuk otentikasi pengguna, katalog produk dengan pencarian dan filter, manajemen keranjang belanja, dan integrasi dengan gateway pembayaran untuk proses checkout yang aman.',
-    image: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?w=800&q=80',
-    date: 'Desember 2023',
+    image: PigFilter,
+    date: 'Agutus 2025',
     slug: 'platform-e-commerce',
-    github: 'https://github.com/bintang-bara-adyasta',
-    tags: ['Laravel', 'React', 'MySQL', 'API']
+    github: '',
+    tags: ['Python', 'AI', 'Machine Learning']
   },
   {
     title: 'Aplikasi Task Manager',

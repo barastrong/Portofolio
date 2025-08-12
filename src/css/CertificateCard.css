@@ -1,0 +1,139 @@
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.certificate-card {
+  background: #111827;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease-out;
+  transform-style: preserve-3d;
+}
+
+.certificate-card::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  z-index: 1;
+  background: conic-gradient(from 180deg at 50% 50%, #4ade80, #38bdf8, #818cf8, #4ade80);
+  animation: rotate 8s linear infinite;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.certificate-card:hover::before {
+  opacity: 1;
+}
+
+.certificate-card::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: #111827;
+  border-radius: 17px;
+  z-index: 2;
+}
+
+.certificate-card-content-wrapper {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.certificate-card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+  transform: translateZ(20px);
+}
+
+.certificate-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-card-image {
+  transform: scale(1.1);
+}
+
+.certificate-card-date {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 4;
+  background-color: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #e5e7eb;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.certificate-content {
+  padding: 1.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  transform: translateZ(50px);
+}
+
+/* --- DESAIN BARU YANG LEBIH ELEGAN --- */
+.certificate-course {
+  color: #4ade80; /* Warna hijau cerah, konsisten dengan border */
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #374151; /* Garis bawah tipis sebagai pemisah */
+  display: block; /* Agar garis bawah full-width */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.certificate-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  color: #f9fafb;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.certificate-content p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.certificate-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem; /* Jarak lebih besar */
+  border-top: 1px solid #374151; /* Garis atas sebagai pemisah */
+}
+
+.list-item {
+  background-color: rgba(74, 222, 128, 0.1);
+  color: #a3e635;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
