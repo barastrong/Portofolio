@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { IoSend, IoChatbubbleEllipses, IoClose, IoCheckmarkCircle } from 'react-icons/io5';
 import '../css/Chatbot.css';
