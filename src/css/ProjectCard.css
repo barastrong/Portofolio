@@ -36,8 +36,10 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-.project-card:hover::before {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover::before {
+    opacity: 1;
+  }
 }
 
 .project-card::after {
@@ -132,5 +134,41 @@
 .project-links {
   display: flex;
   gap: 1rem;
+  justify-content: center;
   margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    transform: none !important;
+    transform-style: flat;
+  }
+
+  .project-card:hover .project-card-image {
+    transform: none;
+  }
+  
+  .project-card-image-wrapper, .project-content {
+    transform: none;
+  }
+
+  .project-card-image-wrapper {
+    height: 200px;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-content p {
+    font-size: 0.95rem;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
 }

@@ -1,5 +1,3 @@
-// src/components/ProjectCard.tsx
-
 import React, { useRef } from 'react';
 import type { MouseEvent } from 'react';
 import { motion } from 'framer-motion';
@@ -18,6 +16,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants }) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    if (window.matchMedia("(pointer: coarse)").matches) return;
     if (!cardRef.current) return;
     const { left, top, width, height } = cardRef.current.getBoundingClientRect();
     const mouseX = (e.clientX - left) / width - 0.5;

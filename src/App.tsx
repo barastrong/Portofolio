@@ -8,6 +8,7 @@ import Project from './pages/Project';
 import Profile from './pages/Profile';
 import ProjectDetail from './pages/ProjectDetail';
 import './css/App.css';
+import Chatbot from './components/Chatbot';
 
 const MainLayout = () => (
   <div className="App">
@@ -30,9 +31,9 @@ function App() {
           <Route path="/profile" element={<Profile />} />
         </Route>
 
-        {/* Rute khusus untuk ProjectDetail (tanpa Navbar) */}
         <Route path="/project/:slug" element={<ProjectDetail />} />
       </Routes>
+      <Chatbot />
     </BrowserRouter>
   );
 }

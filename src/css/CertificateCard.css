@@ -29,9 +29,12 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-.certificate-card:hover::before {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .certificate-card:hover::before {
+    opacity: 1;
+  }
 }
+
 
 .certificate-card::after {
   content: "";
@@ -91,15 +94,14 @@
   transform: translateZ(50px);
 }
 
-/* --- DESAIN BARU YANG LEBIH ELEGAN --- */
 .certificate-course {
-  color: #4ade80; /* Warna hijau cerah, konsisten dengan border */
+  color: #4ade80;
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid #374151; /* Garis bawah tipis sebagai pemisah */
-  display: block; /* Agar garis bawah full-width */
+  border-bottom: 1px solid #374151;
+  display: block;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -125,8 +127,8 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: auto;
-  padding-top: 1.5rem; /* Jarak lebih besar */
-  border-top: 1px solid #374151; /* Garis atas sebagai pemisah */
+  padding-top: 1.5rem;
+  border-top: 1px solid #374151;
 }
 
 .list-item {
@@ -136,4 +138,40 @@
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+  .certificate-card {
+    transform: none !important; 
+    transform-style: flat; 
+  }
+
+  .certificate-card:hover .certificate-card-image {
+    transform: none;
+  }
+  
+  .certificate-card-image-wrapper, .certificate-content {
+    transform: none;
+  }
+
+  .certificate-card-image-wrapper {
+    height: 180px;
+  }
+
+  .certificate-content {
+    padding: 1.25rem;
+  }
+
+  .certificate-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .certificate-content p {
+    font-size: 0.9rem;
+  }
+
+  .certificate-course {
+    font-size: 0.85rem;
+  }
 }

@@ -22,7 +22,7 @@ const projectsData: ProjectData[] = [
     shortDesc: 'Situs jual beli fungsional dengan manajemen produk, keranjang belanja, dan sistem pembayaran.',
     longDesc: 'Platform e-commerce ini dibangun dari awal menggunakan Laravel untuk backend API dan React untuk frontend yang dinamis. Fitur utama termasuk otentikasi pengguna, katalog produk dengan pencarian dan filter, manajemen keranjang belanja, dan integrasi dengan gateway pembayaran untuk proses checkout yang aman.',
     image: PigFilter,
-    date: 'Agutus 2025',
+    date: 'Agustus 2025',
     slug: 'pig-face-filter',
     github: '',
     tags: ['Python', 'AI', 'Machine Learning'],
