@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
-import { FaReact, FaLaravel } from 'react-icons/fa';
+import { FaReact, FaLaravel, FaGithub } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
 import { SiMysql } from 'react-icons/si';
 
@@ -116,6 +116,7 @@ const Home: React.FC = () => {
             { Icon: SiMysql, name: 'MySQL', color: '#4479A1' },
             { Icon: FaReact, name: 'React.js', color: '#61DAFB' },
             { Icon: FaReact, name: 'React Native', color: '#61DAFB' },
+            { Icon:FaGithub, name:'Github', color: '#181717' }
           ].map(skill => (
             <motion.div className="skill-card" key={skill.name} variants={gridItemVariants}>
               <skill.Icon style={{ color: skill.color }} />

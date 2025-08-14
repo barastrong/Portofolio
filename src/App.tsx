@@ -7,8 +7,9 @@ import Sertifikat from './pages/Sertifikat';
 import Project from './pages/Project';
 import Profile from './pages/Profile';
 import ProjectDetail from './pages/ProjectDetail';
-import './css/App.css';
 import Chatbot from './components/Chatbot';
+import Footer from './components/Footer';
+import './css/App.css';
 
 const MainLayout = () => (
   <div className="App">
@@ -16,6 +17,7 @@ const MainLayout = () => (
     <main>
       <Outlet />
     </main>
+    <Footer />
   </div>
 );
 

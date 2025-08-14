@@ -1,0 +1,153 @@
+/* ====================================================== */
+/*         MENU PAGE CSS - DESAIN PREMIUM BARU              */
+/* ====================================================== */
+
+.menu-page-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1.5rem;
+}
+
+/* EFEK AURORA BACKGROUND YANG BIKIN MAHAL */
+@keyframes aurora-animation {
+  0% { transform: translate(-20%, -20%) rotate(0deg); }
+  50% { transform: translate(20%, 20%) rotate(180deg); }
+  100% { transform: translate(-20%, -20%) rotate(360deg); }
+}
+
+.aurora-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150vw;
+  height: 150vh;
+  z-index: 0;
+  filter: blur(100px) brightness(0.6);
+  animation: aurora-animation 40s infinite linear;
+}
+
+.aurora-dot {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.aurora-dot-1 {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(56, 189, 248, 0.2); /* Biru */
+  top: 10%;
+  left: 10%;
+}
+
+.aurora-dot-2 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(74, 222, 128, 0.15); /* Hijau */
+  bottom: 20%;
+  right: 15%;
+}
+
+.aurora-dot-3 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(168, 85, 247, 0.15); /* Ungu */
+  top: 40%;
+  left: 50%;
+}
+
+/* KONTEN UTAMA DI ATAS AURORA */
+.menu-content-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 800px;
+}
+
+.menu-header-revamped {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.menu-header-revamped h1 {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  letter-spacing: -1px;
+}
+
+.menu-header-revamped p {
+  font-size: 1.05rem;
+  color: #a1a1aa;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-item-link {
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+  background-color: rgba(31, 41, 55, 0.5);
+  border: 1px solid #374151;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(55, 65, 81, 0.7);
+  border-color: #4b5563;
+}
+
+.menu-item-icon-wrapper {
+  background-color: rgba(56, 189, 248, 0.1);
+  color: #7dd3fc;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.menu-item-text {
+  flex-grow: 1;
+}
+
+.menu-item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 0.25rem 0;
+}
+
+.menu-item-desc {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.menu-item-arrow {
+  font-size: 1.5rem;
+  color: #9ca3af;
+}
