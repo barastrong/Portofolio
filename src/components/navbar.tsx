@@ -58,8 +58,20 @@ const menuItemVariants = {
 
 const themeIconVariants = {
   initial: { y: -20, opacity: 0, rotate: -90, scale: 0.5 },
-  animate: { y: 0, opacity: 1, rotate: 0, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
-  exit: { y: 20, opacity: 0, rotate: 90, scale: 0.5, transition: { duration: 0.3, ease: 'easeIn' } },
+  animate: { 
+    y: 0, 
+    opacity: 1, 
+    rotate: 0, 
+    scale: 1, 
+    transition: { duration: 0.3, ease: 'easeOut' } 
+  },
+  exit: { 
+    y: 20, 
+    opacity: 0, 
+    rotate: 90, 
+    scale: 0.5, 
+    transition: { duration: 0.3, ease: 'easeIn' } 
+  },
 } as const;
 
 const Navbar: React.FC = () => {

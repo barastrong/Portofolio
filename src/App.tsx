@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import { ThemeProvider } from './contexts/useTheme';
+import { ThemeProvider } from './contexts/ThemeProvider';
 
 import Navbar from './components/navbar';
 import Home from './pages/Home';
