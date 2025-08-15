@@ -1,12 +1,10 @@
 .profile-page-wrapper {
-  background: #111827;
-  color: #e5e7eb;
   min-height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 120px 1rem 2rem;
 }
 
 .profile-container {
@@ -16,18 +14,22 @@
 }
 
 .profile-card {
-  background: linear-gradient(145deg, #1f2937, #192231);
+  background: var(--component-bg);
   border-radius: 24px;
-  border: 1px solid #374151;
+  border: 1px solid var(--component-border);
   padding: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: visible;
-  transition: transform 0.4s ease;
+  transition: all 0.3s ease;
+}
+
+[data-theme='dark'] .profile-card {
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .profile-image-wrapper {
@@ -36,11 +38,12 @@
   border-radius: 50%;
   margin-top: -95px;
   margin-bottom: 1.5rem;
-  border: 1px solid #374151;
+  border: 1px solid var(--component-border);
   flex-shrink: 0;
   box-shadow: 
-    0 0 0 4px #1f2937,
-    0 0 0 6px #38bdf8;
+    0 0 0 4px var(--component-bg),
+    0 0 0 6px var(--accent-color);
+  transition: all 0.3s ease;
 }
 
 .profile-image {
@@ -53,14 +56,14 @@
 .profile-name {
   font-size: 1.9rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--heading-color);
   line-height: 1.2;
 }
 
 .profile-title {
   font-size: 1rem;
   font-weight: 500;
-  color: #38bdf8;
+  color: var(--accent-color);
   margin-top: 0.25rem;
   margin-bottom: 1.5rem;
 }
@@ -68,7 +71,7 @@
 .about-me-text {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #d1d5db;
+  color: var(--text-color);
   margin-bottom: 2rem;
 }
 
@@ -79,13 +82,13 @@
 }
 
 .profile-social-links a {
-  color: #9ca3af;
+  color: var(--icon-color-default);
   font-size: 1.4rem;
   transition: color 0.3s, transform 0.3s;
 }
 
 .profile-social-links a:hover {
-  color: #38bdf8;
+  color: var(--accent-color);
   transform: translateY(-4px);
 }
 
@@ -93,8 +96,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: #38bdf8;
-  color: #111827;
+  background-color: var(--accent-color);
+  color: var(--primary-btn-text);
   font-weight: 600;
   padding: 0.8rem 1.8rem;
   border-radius: 50px;
@@ -103,9 +106,9 @@
 }
 
 .profile-cta-btn:hover {
-  background-color: #7dd3fc;
+  background-color: var(--accent-color-hover);
   transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 15px var(--accent-shadow);
 }
 
 @media (max-width: 600px) {
@@ -114,21 +117,17 @@
     padding-top: 100px;
     padding-bottom: 50px;
   }
-
   .profile-card {
     padding: 2.5rem 1.5rem;
   }
-
   .profile-image-wrapper {
     width: 130px;
     height: 130px;
     margin-top: -85px;
   }
-
   .profile-name {
     font-size: 1.7rem;
   }
-
   .about-me-text {
     font-size: 0.9rem;
   }

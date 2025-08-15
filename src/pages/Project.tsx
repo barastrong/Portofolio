@@ -1,14 +1,9 @@
-// src/pages/Project.tsx
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import '../css/Project.css';
-
-// Impor data dari file terpisah
 import projectsData from '../data/projectData';
 import ProjectCard from '../components/ProjectCard';
 
-// Varian animasi untuk container utama
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {

@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { ThemeProvider } from './contexts/useTheme';
 
 import Navbar from './components/navbar';
 import Home from './pages/Home';
-import Menu from './pages/Menu';
 import Sertifikat from './pages/Sertifikat';
 import Project from './pages/Project';
 import Profile from './pages/Profile';
 import ProjectDetail from './pages/ProjectDetail';
 import Chatbot from './components/Chatbot';
-import Footer from './components/Footer';
 import './css/App.css';
 
 const MainLayout = () => (
@@ -17,17 +16,16 @@ const MainLayout = () => (
     <main>
       <Outlet />
     </main>
-    <Footer />
   </div>
 );
 
 function App() {
   return (
+    <ThemeProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/menu" element={<Menu />} />
           <Route path="/sertifikat" element={<Sertifikat />} />
           <Route path="/project" element={<Project />} />
           <Route path="/profile" element={<Profile />} />
@@ -37,6 +35,7 @@ function App() {
       </Routes>
       <Chatbot />
     </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

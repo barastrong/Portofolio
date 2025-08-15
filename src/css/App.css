@@ -1,3 +1,91 @@
+:root {
+  --background-color: #f8fafc;
+  --text-color: #475569;
+  --heading-color: #1e293b;
+  --accent-color: #2563eb;
+  --accent-color-hover: #3b82f6;
+  --accent-shadow: rgba(37, 99, 235, 0.2);
+  --accent-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+  --primary-btn-text: #ffffff;
+  --component-bg: #ffffff;
+  --component-border: #e2e8f0;
+  --navbar-bg: #ffffff;
+  --navbar-border: #e2e8f0;
+  --icon-color-default: #475569;
+  --icon-color-hover: #0f172a;
+  --icon-bg-active: #f1f5f9;
+  --title-color: #0f172a;
+  --card-bg: #ffffff;
+  --card-bg-inset: #ffffff;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  --card-date-bg: rgba(241, 245, 249, 0.8);
+  --card-date-text: #475569;
+  --card-date-border: transparent;
+  --tag-bg: #e0e7ff;
+  --tag-text: #4338ca;
+  --tag-border: #c7d2fe;
+  --btn-primary-bg: linear-gradient(95deg, #4f46e5, #7c3aed);
+  --btn-primary-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+  --btn-primary-shadow-hover: 0 7px 25px rgba(99, 102, 241, 0.3);
+  --btn-secondary-bg: #f1f5f9;
+  --btn-secondary-text: #475569;
+  --btn-secondary-border: #e2e8f0;
+  --btn-secondary-bg-hover: #e2e8f0;
+  --btn-secondary-text-hover: #1e293b;
+  --btn-secondary-border-hover: #cbd5e1;
+  --cert-course-text: #16a34a;
+  --cert-course-border: #e2e8f0;
+  --cert-list-item-bg: rgba(22, 163, 74, 0.1);
+  --cert-list-item-text: #16a34a;
+}
+
+[data-theme='dark'] {
+  --background-color: #111827;
+  --text-color: #9ca3af;
+  --heading-color: #ffffff;
+  --accent-color: #38bdf8;
+  --accent-color-hover: #7dd3fc;
+  --accent-shadow: rgba(56, 189, 248, 0.3);
+  --accent-gradient: linear-gradient(90deg, #38bdf8, #818cf8);
+  --primary-btn-text: #111827;
+  --component-bg: #1f2937;
+  --component-border: #374151;
+  --navbar-bg: #1f2937;
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --icon-color-default: #9ca3af;
+  --icon-color-hover: #ffffff;
+  --icon-bg-active: rgba(255, 255, 255, 0.08);
+  --title-color: #ffffff;
+  --card-bg: #111827;
+  --card-bg-inset: #111827;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --card-date-bg: rgba(17, 24, 39, 0.7);
+  --card-date-text: #e5e7eb;
+  --card-date-border: rgba(255, 255, 255, 0.1);
+  --tag-bg: rgba(56, 189, 248, 0.1);
+  --tag-text: #818cf8;
+  --tag-border: rgba(56, 189, 248, 0.2);
+  --btn-primary-bg: linear-gradient(95deg, #6366f1, #a855f7);
+  --btn-primary-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+  --btn-primary-shadow-hover: 0 7px 25px rgba(168, 85, 247, 0.35);
+  --btn-secondary-bg: rgba(49, 46, 129, 0.2);
+  --btn-secondary-text: #c7d2fe;
+  --btn-secondary-border: #4f46e5;
+  --btn-secondary-bg-hover: rgba(67, 56, 202, 0.5);
+  --btn-secondary-text-hover: #ffffff;
+  --btn-secondary-border-hover: #a5b4fc;
+  --cert-course-text: #4ade80;
+  --cert-course-border: #374151;
+  --cert-list-item-bg: rgba(74, 222, 128, 0.1);
+  --cert-list-item-text: #a3e635;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;

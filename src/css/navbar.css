@@ -4,6 +4,7 @@
   --icon-color-default: #9ca3af;
   --icon-color-hover: #ffffff;
   --icon-bg-active: rgba(255, 255, 255, 0.08);
+  --theme-icon-color: #f6e05e;
 }
 
 .navbar {
@@ -55,6 +56,37 @@
 .navbar-menu a.active {
   color: var(--icon-color-hover);
   background-color: var(--icon-bg-active);
+}
+
+.theme-toggle {
+  /* Reset style default button */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem;
+  margin: 0;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color-default);
+  transition: all 0.2s ease-in-out;
+  overflow: hidden; 
+  position: relative;
+  width: 44px; 
+  height: 44px;
+}
+
+.theme-toggle:hover {
+  color: var(--theme-icon-color); 
+  background-color: var(--icon-bg-active);
+}
+
+.theme-toggle > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,13 +1,15 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion'; 
+import { useTheme } from '../contexts/useTheme';
 import '../css/navbar.css';
 import { 
   FaHome, 
-  FaListUl,
   FaAward,
   FaLaptopCode,
-  FaUserCircle 
+  FaUserCircle,
+  FaSun,
+  FaMoon
 } from 'react-icons/fa';
 
 interface NavItem {
@@ -18,7 +20,6 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { path: '/', label: 'Home', Icon: FaHome },
-  { path: '/menu', label: 'Menu', Icon: FaListUl  },
   { path: '/sertifikat', label: 'Sertifikat', Icon: FaAward  }, 
   { path: '/project', label: 'Project', Icon: FaLaptopCode  },
   { path: '/profile', label: 'Profile', Icon: FaUserCircle },
@@ -55,7 +56,15 @@ const menuItemVariants = {
   },
 };
 
+const themeIconVariants = {
+  initial: { y: -20, opacity: 0, rotate: -90, scale: 0.5 },
+  animate: { y: 0, opacity: 1, rotate: 0, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
+  exit: { y: 20, opacity: 0, rotate: 90, scale: 0.5, transition: { duration: 0.3, ease: 'easeIn' } },
+} as const;
+
 const Navbar: React.FC = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <motion.nav 
       className="navbar"
@@ -82,6 +91,28 @@ const Navbar: React.FC = () => {
             </NavLink>
           </motion.div>
         ))}
+        
+        <motion.button 
+          onClick={toggleTheme} 
+          className="theme-toggle"
+          title={theme === 'light' ? 'Ganti ke Mode Gelap' : 'Ganti ke Mode Terang'}
+          variants={menuItemVariants}
+          whileHover={{ scale: 1.1, rotate: 15 }}
+          whileTap={{ scale: 0.9, rotate: -15 }}
+          aria-label="Toggle theme"
+        >
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={theme}
+              variants={themeIconVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+            >
+              {theme === 'light' ? <FaMoon /> : <FaSun />}
+            </motion.div>
+          </AnimatePresence>
+        </motion.button>
       </motion.div>
     </motion.nav>
   );

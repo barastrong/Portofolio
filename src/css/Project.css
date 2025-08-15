@@ -11,25 +11,30 @@
 .project-page-title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 800;
-  color: #ffffff;
   margin-bottom: 1rem;
+  color: var(--heading-color);
 }
 
 .project-page-title span {
   background: linear-gradient(90deg, #38bdf8, #818cf8);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .project-page-subtitle {
   font-size: 1.1rem;
-  color: #a0aec0;
   line-height: 1.7;
+  color: var(--text-color);
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -69,19 +74,40 @@
 }
 
 
-/* --- Media Queries untuk layout halaman --- */
-
 @media (max-width: 768px) {
   .project-page-container {
     padding: 80px 1.5rem 4rem;
   }
+  
+  .project-page-header {
+    margin-bottom: 4rem;
+  }
+
+  .project-page-subtitle {
+    font-size: 1rem;
+  }
+
   .projects-grid {
     gap: 2rem;
   }
 }
 
 @media (max-width: 480px) {
+  .project-page-container {
+    padding: 60px 1rem 3rem;
+  }
+
+  .project-page-header {
+    margin-bottom: 3rem;
+  }
+  
+  .project-page-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
