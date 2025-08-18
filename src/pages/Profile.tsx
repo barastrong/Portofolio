@@ -53,7 +53,7 @@ const Profile: React.FC = () => {
           </motion.h2>
 
           <motion.p className="about-me-text" variants={itemVariants}>
-            Sebagai seorang Backend Developer, saya percaya bahwa di balik setiap aplikasi yang hebat, terdapat arsitektur digital yang elegan dan andal. Saya bersemangat mengubah ide-ide kompleks menjadi kode yang bersih dan efisien, membangun fondasi yang kokoh untuk pengalaman pengguna yang luar biasa.
+            Sebagai seorang Backend Developer. Saya percaya bahwa di balik setiap aplikasi yang hebat, terdapat arsitektur digital yang elegan dan andal. Saya bersemangat untuk merancang, mengembangkan, dan memelihara kode-kode pemrograman yang berhubungan dengan server, database, serta mengelola API (Application Programming Interface). Selain itu juga meningkatkan performa serta keamanan sistem agar aplikasi dapat berjalan dengan lancar, aman dan efisien.
           </motion.p>
           
           <motion.div className="profile-social-links" variants={itemVariants}>

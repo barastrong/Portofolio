@@ -79,7 +79,7 @@ const Home: React.FC = () => {
         <motion.div className="hero-content" variants={heroTextContainerVariants}>
           <motion.h1 variants={heroTextItemVariants}>Halo, saya Bintang Bara Adyasta</motion.h1>
           <motion.h2 variants={heroTextItemVariants}>Backend Developer</motion.h2>
-          <motion.p variants={heroTextItemVariants}>Menciptakan solusi web yang inovatif dan efisien dari hulu ke hilir dengan passion untuk kode yang bersih dan pengalaman pengguna yang luar biasa.</motion.p>
+          <motion.p variants={heroTextItemVariants}>Menciptakan skema database dan mengoptimalkan performa sistem. Serta menjamin aplikasi beroperasi dengan baik di sisi server dan dapat mengirim data yang diperlukan ke aplikasi frontend. Selain itu juga dapat membangun sistem yang solid dan dapat diandalkan untuk kesuksesan sebuah aplikasi atau website.</motion.p>
           <motion.div className="hero-buttons" variants={heroTextItemVariants}>
             <Link to="/project" className="btn btn-primary">Lihat Proyek</Link>
             <a href="/CV-BintangBaraAdyasta.pdf" download className="btn btn-secondary">Unduh CV</a>

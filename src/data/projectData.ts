@@ -11,6 +11,7 @@ export interface ProjectData {
   shortDesc: string;
   longDesc: string;
   image: string;
+  documentation?: string[],
   date: string;
   slug: string;
   github?: string;
@@ -28,6 +29,7 @@ const projectsData: ProjectData[] = [
     image: PigFilter,
     date: 'Agustus 2025',
     slug: 'pig-face-filter',
+    pptLink: 'https://www.canva.com/design/DAGviorWCGQ/2V6AckRVlwDq3f56WgTLDA/edit?utm_content=DAGviorWCGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
     tags: ['Python', 'AI', 'AR', 'MediaPipe'],
     fitures: ['AI Image Processing', 'Real-time Face Detection', 'Interactive User Interface']
   },
