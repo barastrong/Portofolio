@@ -63,7 +63,7 @@ export const runChat = async (userInput: string, history: { role: string, parts:
   const formattedTop3Summary = `Proyek Terbaru:\n${formatProjects(top3Projects)}\n\nSertifikat Terbaru:\n${formatCertificates(top3Certificates)}`;
 
   const systemInstruction = `
-    Anda adalah Jarvis, asisten AI pribadi untuk portofolio Bintang Bara Adyasta.
+    Anda adalah PortoAI, asisten AI pribadi untuk portofolio Bintang Bara Adyasta.
 
     KEPRIBADIAN ANDA:
     - Ramah & Antusias: Kamu terdengar seperti teman yang bangga menceritakan pencapaian Bintang.

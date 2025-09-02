@@ -2,6 +2,7 @@ import AppDev from '../assets/images/Cert_AppDev.jpg';
 import WebDev from '../assets/images/Cert_WebDev.jpg';
 import GameDev from '../assets/images/Cert_GameDev.jpg';
 import Beginner from '../assets/images/Cert_Beginner.jpg';
+import TeensAi from '../assets/images/Cert_TeensAi.jpg';
 
 export interface CertificateData {
   date: string;
@@ -13,20 +14,28 @@ export interface CertificateData {
 }
 
 const certificateData: CertificateData[] = [
+    {
+    date: 'Agustus 2025',
+    image: TeensAi,
+    title: 'Pembuatan dan Impelementasi Tentang Ai',
+    course: 'Timedoor Academy',
+    description: 'Sertifikat pelatihan yang menekankan pada penerapan AI dalam berbagai proyek, termasuk pengolahan gambar, pemrosesan bahasa alami, dan pembelajaran mesin.',
+    list: ['Python', 'AI', 'Machine Learning', 'Deep Learning']
+  },
   {
     date: 'Februari 2025',
     image: AppDev,
     title: 'Pembuatan Aplikasi Mobile',
     course: 'Timedoor Academy',
-    description: 'Sertifikasi profesional yang mencakup pengembangan API, manajemen database, dan kontrol versi dengan Python dan Django.',
+    description: 'Sertifikat pelatihan yang menekankan pada pengembangan aplikasi mobile menggunakan React Native, termasuk pembuatan antarmuka pengguna, manajemen state, dan integrasi backend.',
     list: ['React Native', 'Firebase', 'Node.js']
   },
   {
     date: 'Juni 2023',
     image: WebDev,
-    title: 'Pengembangan Web Full Stack',
+    title: 'Pengembangan Web  Developer',
     course: 'Timedoor Academy',
-    description: 'Pelatihan komprehensif tentang fundamental React, termasuk komponen, state, props, hooks, dan routing.',
+    description: 'Sertifikat pelatihan yang menekankan pada pengembangan web menggunakan HTML, CSS, dan JavaScript, termasuk pembuatan halaman web responsif dan interaktif.',
     list: ['HTML', 'CSS', 'JavaScript']
   },
   {
@@ -34,7 +43,7 @@ const certificateData: CertificateData[] = [
     image: GameDev,
     title: 'Pembuatan Game menggunakan JavaScript',
     course: 'Timedoor Academy',
-    description: 'Memahami konsep dasar cloud AWS, layanan inti, keamanan, arsitektur, harga, dan model dukungan.',
+    description: 'Sertifikat pelatihan yang menekankan pada pengembangan game menggunakan JavaScript, termasuk pembuatan logika game, animasi, dan interaksi pengguna.',
     list: ['HTML', 'CSS', 'JavaScript']
   },
   {
@@ -42,7 +51,7 @@ const certificateData: CertificateData[] = [
     image: Beginner,
     title: 'Belajar Pemrograman untuk Pemula',
     course: 'Timedoor Academy',
-    description: 'Memahami konsep dasar cloud AWS, layanan inti, keamanan, arsitektur, harga, dan model dukungan.',
+    description: 'Sertifikat pelatihan yang menekankan pada dasar-dasar pemrograman, termasuk konsep pemrograman, struktur data, dan algoritma.',
     list: ['HTML', 'CSS', 'JavaScript']
   },
 ];

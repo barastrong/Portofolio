@@ -37,7 +37,7 @@ const BotMessageRenderer = ({ text }: { text: string }) => {
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { text: "Halo! Saya Jarvis, asisten AI Bintang. Ada yang bisa saya bantu? ✨", sender: 'bot' }
+    { text: "Halo! Saya PortoAi, Sebuah AI yang di rancang untuk menejelaskan tentang portofolio pada website ini. Ada yang bisa saya bantu? ✨", sender: 'bot' }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);

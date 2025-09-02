@@ -1,6 +1,5 @@
 import PigFilter from '../assets/images/pigFilter.png';
 import Epicurean from '../assets/images/Epicurean.png';
-import NeoManga from '../assets/images/NeoManga.png';
 import BintangArga from '../assets/images/argabintang.png';
 import UjianDTP from '../assets/images/UjianDTP.png';
 import SongData from '../assets/images/SongData.png';
@@ -24,25 +23,14 @@ export interface ProjectData {
 const projectsData: ProjectData[] = [
   {
     title: 'Pig Face Filter',
-    shortDesc: 'Situs jual beli fungsional dengan manajemen produk, keranjang belanja, dan sistem pembayaran.',
-    longDesc: 'Platform e-commerce ini dibangun dari awal menggunakan Laravel untuk backend API dan React untuk frontend yang dinamis. Fitur utama termasuk otentikasi pengguna, katalog produk dengan pencarian dan filter, manajemen keranjang belanja, dan integrasi dengan gateway pembayaran untuk proses checkout yang aman.',
+    shortDesc: 'Aplikasi web interaktif yang memungkinkan pengguna untuk menerapkan filter wajah berbasis AI secara real-time menggunakan teknologi MediaPipe.',
+    longDesc: 'Aplikasi web interaktif yang memungkinkan pengguna untuk menerapkan filter wajah berbasis AI secara real-time menggunakan teknologi MediaPipe. Pengguna dapat mengunggah gambar atau menggunakan webcam mereka untuk melihat efek filter secara langsung. Aplikasi ini dibangun dengan Python dan mengintegrasikan model AI untuk deteksi wajah dan penerapan filter.',
     image: PigFilter,
     date: 'Agustus 2025',
     slug: 'pig-face-filter',
     pptLink: 'https://www.canva.com/design/DAGviorWCGQ/2V6AckRVlwDq3f56WgTLDA/edit?utm_content=DAGviorWCGQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
     tags: ['Python', 'AI', 'AR', 'MediaPipe'],
-    fitures: ['AI Image Processing', 'Real-time Face Detection', 'Interactive User Interface']
-  },
-  {
-      title: 'NeoManga Website',
-    shortDesc: 'Aplikasi untuk booking kamar hotel dengan kalender interaktif dan manajemen pemesanan.',
-    longDesc: 'Sebuah sistem lengkap untuk reservasi hotel, memungkinkan tamu untuk melihat ketersediaan kamar secara real-time melalui kalender interaktif. Admin dapat mengelola kamar, harga, dan pemesanan melalui dasbor khusus. Dibangun dengan Laravel dan Vue.js untuk menciptakan pengalaman pengguna yang mulus dan responsif.',
-    image: NeoManga,
-    date: 'Juni 2025',
-    slug: 'Neo-Manga',
-    github: 'https://github.com/barastrong/NeoManga',
-    tags: ['Laravel', 'Tailwind', 'MySQL'],
-    fitures: ['Free Manga Reading','History','User Authentifikasi', 'Bookmark']
+    fitures: ['Real-time Face Detection', 'AI-based Filters', 'Image Upload', 'Webcam Integration', 'User-friendly Interface']
   },
   {
       title: 'Website shoope palsu',
