@@ -5,7 +5,6 @@ import '../css/Home.css';
 import { FaReact, FaLaravel, FaGithub } from 'react-icons/fa';
 import ProfileImage from '../assets/Profile.jpg';
 import { SiMysql } from 'react-icons/si';
-
 import projectsData from '../data/projectData';
 import certificateData from '../data/certificateData';
 import ProjectCard from '../components/ProjectCard';

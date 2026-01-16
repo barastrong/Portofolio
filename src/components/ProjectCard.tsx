@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import type { MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -13,24 +13,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants }) => {
-  const cardRef = useRef<HTMLDivElement>(null);
   const [isImageExpanded, setIsImageExpanded] = useState(false);
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (window.matchMedia("(pointer: coarse)").matches || isImageExpanded) return;
-    if (!cardRef.current) return;
-    const { left, top, width, height } = cardRef.current.getBoundingClientRect();
-    const mouseX = (e.clientX - left) / width - 0.5;
-    const mouseY = (e.clientY - top) / height - 0.5;
-    const rotateY = mouseX * 25;
-    const rotateX = -mouseY * 25;
-    cardRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-  };
-
-  const handleMouseLeave = useCallback(() => {
-    if (!cardRef.current) return;
-    cardRef.current.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
-  }, []);
 
   const toggleImageSize = (e: MouseEvent) => {
     e.stopPropagation();
@@ -41,8 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants }) => {
   const closeImage = useCallback((e?: MouseEvent) => {
     e?.stopPropagation();
     setIsImageExpanded(false);
-    handleMouseLeave();
-  }, [handleMouseLeave]);  
+  }, []);  
 
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
@@ -64,15 +46,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants }) => {
   return (
     <>
       <motion.div
-        ref={cardRef}
         className="project-card"
         variants={variants}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+          whileHover={{ 
+                y: -15, 
+                scale: 1.03,
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
+              // Agar z-index berubah saat hover (supaya tidak tertutup kartu sebelah)
+              style={{ zIndex: 1 }}
+              whileTap={{ scale: 0.98 }}
       >
         <div className="project-card-content-wrapper">
           <div className="project-card-image-wrapper">
-            <span className="project-card-date">{project.date}</span>
+            {project.date && <span className="project-card-date">{project.date}</span>}
             <img
               src={project.image}
               alt={project.title}

@@ -3,6 +3,7 @@ import WebDev from '../assets/images/Cert_WebDev.jpg';
 import GameDev from '../assets/images/Cert_GameDev.jpg';
 import Beginner from '../assets/images/Cert_Beginner.jpg';
 import TeensAi from '../assets/images/Cert_TeensAi.jpg';
+import Webinar from '../assets/images/WebinerNetworking.jpg';
 
 export interface CertificateData {
   date: string;
@@ -10,11 +11,18 @@ export interface CertificateData {
   title: string;
   course: string;
   description: string;
-  list: string[];
+  list?: string[];
 }
 
 const certificateData: CertificateData[] = [
-    {
+  {
+    date: 'Agustus 2025',
+    image: Webinar,
+    title: 'Pembinaan tentang IT Networking',
+    course: 'ID-Networkers',
+    description: 'Sertifikat pelatihan yang menekankan pada penerapan AI dalam berbagai proyek, termasuk pengolahan gambar, pemrosesan bahasa alami, dan pembelajaran mesin.',
+  },
+  {
     date: 'Agustus 2025',
     image: TeensAi,
     title: 'Pembuatan dan Impelementasi Tentang Ai',

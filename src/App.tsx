@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeProvider';
-
 import Navbar from './components/navbar';
 import Home from './pages/Home';
 import Sertifikat from './pages/Sertifikat';
@@ -21,7 +19,6 @@ const MainLayout = () => (
 
 function App() {
   return (
-    <ThemeProvider>
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
@@ -35,7 +32,6 @@ function App() {
       </Routes>
       <Chatbot />
     </BrowserRouter>
-    </ThemeProvider>
   );
 }
 

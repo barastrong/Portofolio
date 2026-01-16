@@ -1,56 +1,56 @@
 .page-section {
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-title {
-  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
   color: var(--heading-color);
 }
 
 .section-title span {
   color: var(--accent-color);
-  text-shadow: 0 0 10px var(--accent-shadow);
 }
 
 .hero-container {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  gap: 3rem;
-  padding-top: 100px;
+  gap: 2rem;
+  padding-top: 250px;
   text-align: center;
+  min-height: calc(100vh - 250px);
+  justify-content: center;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.2rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.2;
   color: var(--heading-color);
+  margin-bottom: 0.5rem;
 }
 
 .hero-content h2 {
-  font-size: clamp(1.2rem, 4vw, 1.8rem);
-  font-weight: 500;
-  margin: 0.5rem 0 1.5rem 0;
+  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0;
   color: var(--accent-color);
 }
 
 .hero-content p {
   font-size: 1rem;
   line-height: 1.7;
-  max-width: 550px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
   color: var(--text-color);
 }
 
 .hero-buttons {
-  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,38 +58,42 @@
 }
 
 .btn {
-  padding: 0.8rem 1.6rem;
-  border-radius: 8px;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--accent-color);
   color: var(--primary-btn-text);
+  box-shadow: var(--btn-primary-shadow);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-color-hover);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px var(--accent-shadow);
+  transform: translateY(-2px);
+  box-shadow: var(--btn-primary-shadow-hover);
 }
 
 .btn-secondary {
-  background-color: var(--component-bg);
-  color: var(--text-color);
-  border-color: var(--component-border);
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+  border-color: var(--btn-secondary-border);
 }
 
 .btn-secondary:hover {
-  background-color: var(--component-border);
-  border-color: var(--accent-color);
+  background-color: var(--btn-secondary-bg-hover);
+  color: var(--btn-secondary-text-hover);
+  transform: translateY(-2px);
 }
 
 .hero-image-wrapper {
@@ -99,104 +103,109 @@
 }
 
 .hero-image {
-  width: clamp(200px, 50vw, 280px);
-  height: clamp(200px, 50vw, 280px);
+  width: clamp(220px, 45vw, 280px);
+  height: clamp(220px, 45vw, 280px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid var(--component-bg);
-  box-shadow: 0 0 40px var(--accent-shadow);
+  box-shadow: 0 10px 40px var(--accent-shadow);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.2rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .skill-card {
   background-color: var(--component-bg);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
   text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
   border: 1px solid var(--component-border);
+  box-shadow: var(--card-shadow);
 }
 
 .skill-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border-color: var(--accent-color);
 }
 
 .skill-card svg {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
-  color: var(--accent-color);
 }
 
 .skill-card h3 {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--heading-color);
+  margin: 0;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .view-all-projects {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 }
 
 @media (min-width: 500px) {
   .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 768px) {
   .page-section {
-    padding: 5rem 2rem;
+    padding: 4rem 2rem;
   }
+  
+  .skills-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .skill-card h3 {
-    font-size: 1rem;
   }
 }
 
 @media (min-width: 992px) {
   .page-section {
-    padding: 6rem 2rem;
+    padding: 5rem 2rem;
   }
+  
   .hero-container {
     flex-direction: row;
     justify-content: space-between;
-    min-height: 70vh;
     text-align: left;
     gap: 4rem;
+    padding-top: 120px;
   }
-  .hero-content {
-    align-items: flex-start;
-  }
+  
   .hero-content p {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0 0 1.5rem 0;
   }
+  
   .hero-buttons {
     justify-content: flex-start;
   }
+  
   .hero-image {
-    width: clamp(300px, 30vw, 380px);
-    height: clamp(300px, 30vw, 380px);
+    width: clamp(300px, 28vw, 380px);
+    height: clamp(300px, 28vw, 380px);
   }
+  
   .projects-grid {
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
