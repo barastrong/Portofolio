@@ -57,13 +57,31 @@ const Profile: React.FC = () => {
           </motion.p>
           
           <motion.div className="profile-social-links" variants={itemVariants}>
-            <a href="https://linkedin.com/in/bintang-bara-adyasta-348237322" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a 
+              href="https://linkedin.com/in/bintang-bara-adyasta-348237322" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="LinkedIn"
+              className="linkedin" // Tambahkan ini
+            >
               <FaLinkedin />
             </a>
-            <a href="https://github.com/barastrong" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a 
+              href="https://github.com/barastrong" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="GitHub"
+              className="github" // Tambahkan ini
+            >
               <FaGithub />
             </a>
-            <a href="https://www.instagram.com/bara_839_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a 
+              href="https://www.instagram.com/bara_839_?..." 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram"
+              className="instagram" // Tambahkan ini
+            >
               <FaInstagram />
             </a>
           </motion.div>

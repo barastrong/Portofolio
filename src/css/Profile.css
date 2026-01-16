@@ -77,11 +77,24 @@
   color: var(--icon-color-default);
   font-size: 1.4rem;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.profile-social-links a:hover {
-  color: var(--accent-color);
+.profile-social-links a.linkedin:hover {
+  color: #0077b5;
   transform: translateY(-3px);
+}
+
+.profile-social-links a.github:hover {
+  color: #24292e;
+  transform: translateY(-3px);
+}
+
+.profile-social-links a.instagram:hover {
+  transform: translateY(-3px);
+color: #c1558b ;
 }
 
 .profile-cta-btn {
@@ -99,7 +112,6 @@
 }
 
 .profile-cta-btn:hover {
-  background-color: var(--accent-color-hover);
   transform: translateY(-2px);
   box-shadow: var(--btn-primary-shadow-hover);
 }
