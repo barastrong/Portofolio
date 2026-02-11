@@ -26,9 +26,8 @@ function App() {
           <Route path="/sertifikat" element={<Sertifikat />} />
           <Route path="/project" element={<Project />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/project/:slug" element={<ProjectDetail />} />
         </Route>
-
-        <Route path="/project/:slug" element={<ProjectDetail />} />
       </Routes>
       <Chatbot />
     </BrowserRouter>

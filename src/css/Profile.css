@@ -4,38 +4,75 @@
   align-items: center;
   justify-content: center;
   padding: 120px 1rem 2rem;
+  position: relative;
 }
 
 .profile-container {
   width: 100%;
-  max-width: 450px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .profile-card {
-  background: var(--component-bg);
-  border-radius: 24px;
-  border: 1px solid var(--component-border);
-  padding: 3rem;
+  background: var(--card-bg-glass);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 28px;
+  border: 2px solid var(--component-border);
+  padding: 3.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: var(--card-shadow);
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12), 0 4px 16px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: visible;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.2), 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image-wrapper {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  margin-top: -95px;
-  margin-bottom: 1.5rem;
-  border: 5px solid var(--component-bg);
-  box-shadow: 0 10px 30px var(--accent-shadow);
-  transition: all 0.3s ease;
+  margin-top: -105px;
+  margin-bottom: 1.75rem;
+  border: 6px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.25);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.profile-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+  background-size: 300% 300%;
+  animation: gradientRotate 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+@keyframes gradientRotate {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .profile-image {
@@ -43,77 +80,116 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  position: relative;
+  z-index: 1;
 }
 
 .profile-name {
-  font-size: 1.9rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 800;
   color: var(--heading-color);
   line-height: 1.2;
   margin: 0;
+  font-family: var(--font-heading);
+  letter-spacing: -0.5px;
 }
 
 .profile-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  margin: 0.5rem 0 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0.75rem 0 1.75rem;
+  font-family: var(--font-heading);
 }
 
 .about-me-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 2.25rem;
+  max-width: 90%;
 }
 
 .profile-social-links {
   display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: 1.75rem;
+  margin-bottom: 2.25rem;
 }
 
 .profile-social-links a {
   color: var(--icon-color-default);
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
+  font-size: 1.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.75rem;
+  border-radius: 14px;
+  position: relative;
+}
+
+.profile-social-links a:hover {
+  transform: translateY(-5px) scale(1.15);
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .profile-social-links a.linkedin:hover {
   color: #0077b5;
-  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 119, 181, 0.35);
 }
 
 .profile-social-links a.github:hover {
   color: #24292e;
-  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(36, 41, 46, 0.35);
 }
 
 .profile-social-links a.instagram:hover {
-  transform: translateY(-3px);
-color: #c1558b ;
+  color: #c1558b;
+  box-shadow: 0 8px 24px rgba(193, 85, 139, 0.35);
 }
 
 .profile-cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  background-color: var(--accent-color);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: var(--primary-btn-text);
-  font-weight: 600;
-  padding: 0.85rem 2rem;
-  border-radius: 10px;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 14px;
   text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: var(--btn-primary-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35), 0 2px 8px rgba(139, 92, 246, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-cta-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-cta-btn:hover::before {
+  opacity: 1;
 }
 
 .profile-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--btn-primary-shadow-hover);
+  transform: translateY(-3px) scale(1.02);
+  color: white;
+  box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45), 0 4px 16px rgba(139, 92, 246, 0.3);
+}
+
+.profile-cta-btn svg,
+.profile-cta-btn span {
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 600px) {
@@ -121,22 +197,31 @@ color: #c1558b ;
     align-items: flex-start;
     padding-top: 100px;
   }
-  
+
   .profile-card {
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 2rem;
   }
-  
+
   .profile-image-wrapper {
-    width: 130px;
-    height: 130px;
-    margin-top: -85px;
+    width: 150px;
+    height: 150px;
+    margin-top: -95px;
   }
-  
+
   .profile-name {
-    font-size: 1.7rem;
+    font-size: 1.9rem;
   }
-  
+
   .about-me-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .profile-social-links {
+    gap: 1.5rem;
+  }
+
+  .profile-social-links a {
+    font-size: 1.6rem;
   }
 }

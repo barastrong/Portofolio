@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaCalendarAlt, FaBook, FaBolt, FaCamera } from 'react-icons/fa';
 
 import projectsData from '../data/projectData';
 import '../css/ProjectDetail.css';
@@ -79,34 +79,36 @@ const ProjectDetail: React.FC = () => {
         >
           <motion.header className="detail-page-header" variants={itemVariants}>
             <h1 className="detail-page-title">{project.title}</h1>
-            <p className="detail-page-date">{project.date}</p>
+            <p className="detail-page-date"><FaCalendarAlt style={{ marginRight: '0.5rem', color: '#3B82F6' }} /> {project.date}</p>
             <div className="detail-page-tags">
               {project.tags.map((tag) => (
                 <span key={tag} className="detail-page-tag">{tag}</span>
               ))}
             </div>
           </motion.header>
-          
+
           <motion.div className="detail-page-content" variants={itemVariants}>
             <div className="detail-page-description">
+              <h3 className="section-subtitle"><FaBook style={{ marginRight: '0.5rem', color: '#6366F1' }} /> Tentang Proyek</h3>
               <p>{project.longDesc}</p>
             </div>
             <div className="detail-page-image-wrapper">
-              <img 
-                src={project.image} 
-                alt={project.title} 
+              <img
+                src={project.image}
+                alt={project.title}
                 className="detail-page-image"
-                onClick={() => handleOpenImage(project.image)} 
+                onClick={() => handleOpenImage(project.image)}
               />
             </div>
           </motion.div>
 
           {project.fitures && project.fitures.length > 0 && project.fitures[0].trim() !== '' && (
             <motion.section className="features-section" variants={itemVariants}>
-              <h3>Apa Saja yang Bisa Dilakukan?</h3>
+              <h3 className="section-heading"><FaBolt style={{ marginRight: '0.5rem', color: '#F59E0B' }} /> Fitur-Fitur Utama</h3>
               <div className="features-grid">
-                {project.fitures.map((fitur) => (
-                  <div key={fitur} className="feature-card">
+                {project.fitures.map((fitur, index) => (
+                  <div key={index} className="feature-card">
+                    <span className="feature-icon">✓</span>
                     <p>{fitur}</p>
                   </div>
                 ))}
@@ -116,15 +118,18 @@ const ProjectDetail: React.FC = () => {
 
           {project.documentation && project.documentation.length > 0 && (
             <motion.section className="documentation-section" variants={itemVariants}>
-              <h3>Dokumentasi Proyek</h3>
+              <h3 className="section-heading"><FaCamera style={{ marginRight: '0.5rem', color: '#8B5CF6' }} /> Dokumentasi Proyek</h3>
+              <p className="documentation-description">
+                Berikut adalah dokumentasi visual dari proyek ini untuk memberikan gambaran lebih jelas tentang tampilan dan fitur-fiturnya.
+              </p>
               <div className="documentation-grid">
                 {project.documentation.map((docImage, index) => (
                   <div key={index} className="documentation-image-wrapper">
-                    <img 
-                      src={docImage} 
-                      alt={`${project.title} documentation ${index + 1}`} 
+                    <img
+                      src={docImage}
+                      alt={`${project.title} documentation ${index + 1}`}
                       className="documentation-image"
-                      onClick={() => handleOpenImage(docImage)} 
+                      onClick={() => handleOpenImage(docImage)}
                     />
                   </div>
                 ))}
@@ -152,8 +157,18 @@ const ProjectDetail: React.FC = () => {
         >
           <button
             onClick={handleCloseImage}
-            className="image-modal-close-button"
             aria-label="Close image"
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              fontSize: '2rem',
+              cursor: 'pointer',
+              lineHeight: 1
+            }}
           >
             &times;
           </button>
