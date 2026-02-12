@@ -113,7 +113,7 @@ const Home: React.FC = () => {
           {[
             { Icon: FaLaravel, name: 'Laravel', color: '#FF2D20' },
             { Icon: SiMysql, name: 'MySQL', color: '#4479A1' },
-            { Icon: FaReact, name: 'React.js', color: '#61DAFB' },
+            { Icon: FaReact, name: 'React JS', color: '#61DAFB' },
             { Icon: FaReact, name: 'React Native', color: '#61DAFB' },
             { Icon:FaGithub, name:'Github', color: '#181717' }
           ].map(skill => (

@@ -6,6 +6,7 @@ import TeensAi from '../assets/images/Cert_TeensAi.jpg';
 import Webinar from '../assets/images/WebinerNetworking.jpg';
 import Elevaite from '../assets/images/elevaite.jpg'
 import Mecnesia from '../assets/images/Cert_Mecnesia.jpg'
+import PesertaLombaWebDev from '../assets/images/Cert_PesertaLomba.jpg'
 
 export interface CertificateData {
   date: string;
@@ -17,25 +18,26 @@ export interface CertificateData {
 }
 
 const certificateData: CertificateData[] = [
-    {
-      date: 'November 2025',
-      image: Mecnesia,
-      title: 'Basic English Course',
-      course: 'Mecnesia Academy',
-      description: 'Sertifikat kursus Bahasa Inggris dasar yang berfokus pada peningkatan kemampuan grammar, vocabulary, reading, writing, dan basic conversation. Pelatihan ini membantu membangun fondasi komunikasi Bahasa Inggris yang baik untuk kebutuhan akademik maupun profesional.',
-    },
-    {
+  {
+    date: 'November 2025',
+    image: Mecnesia,
+    title: 'Basic English Course',
+    course: 'Mecnesia Academy',
+    description: 'Sertifikat kursus Bahasa Inggris dasar yang berfokus pada peningkatan kemampuan grammar, vocabulary, reading, writing, dan basic conversation. Pelatihan ini membantu membangun fondasi komunikasi Bahasa Inggris yang baik untuk kebutuhan akademik maupun profesional.',
+  },
+  {
+    date: 'November 2025',
+    image: PesertaLombaWebDev,
+    title: 'Peserta Lomba Web Dev',
+    course: 'IDN IT FEST',
+    description: 'Kompetisi tim Web Development yang diselenggarakan oleh IDN Boarding School, berfokus pada perancangan dan pengembangan website inovatif dengan kolaborasi tim, kreativitas, serta penerapan teknologi modern.',
+    list:['HTML', 'CSS', 'JavaScript']
+  },
+  {
     date: 'September 2025',
     image: Elevaite,
     title: 'Kursus Persiapan untuk Dasar-Dasar Azure AI (AI-900)',
     course: 'Academy Mereka',
-    description: 'Sertifikat pelatihan yang menekankan pada penerapan AI dalam berbagai proyek, termasuk pengolahan gambar, pemrosesan bahasa alami, dan pembelajaran mesin.',
-    },
-    {
-    date: 'Agustus 2025',
-    image: Webinar,
-    title: 'Pembinaan tentang IT Networking',
-    course: 'ID-Networkers',
     description: 'Sertifikat pelatihan yang menekankan pada penerapan AI dalam berbagai proyek, termasuk pengolahan gambar, pemrosesan bahasa alami, dan pembelajaran mesin.',
   },
   {
