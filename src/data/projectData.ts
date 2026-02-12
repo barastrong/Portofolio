@@ -9,7 +9,8 @@ import HighwayTracker from '../assets/images/Highway_Tracker.png';
 import DectectionObjectVideo from '../assets/images/Detection_Object_Video.png';
 import VintageWebsite from '../assets/images/VintageWebsite.png';
 import NeoManga from '../assets/images/NeoManga.png';
-import WebTesKepribadian from '../assets/images/TesKepribadian.png'
+import WebTesKepribadian from '../assets/images/TesKepribadian.png';
+import JemuranOtomatis from '../assets/images/DashboardIOT.png';
 
 // Documentation
 import { LoginApp, RegisterApp, OnBoarding1, OnBoarding2, OnBoarding3, GuideBook, DashboardApp, ProfileApp, AktivitasForm, AnalisisAI, AnalisisAI2 } from '../assets/docs/SmartReportAI'
@@ -40,7 +41,7 @@ const projectsData: ProjectData[] = [
     title: 'Aplikasi Report Aktivitas',
     shortDesc: 'Aplikasi pelaporan aktivitas berbasis AI yang membantu pengguna mencatat, menganalisis, dan mendapatkan insight produktivitas secara otomatis.',
    longDesc: 'Aplikasi Report Aktivitas (Smart Report AI) merupakan platform berbasis web/mobile yang dirancang untuk membantu pengguna dalam mencatat dan menganalisis aktivitas harian secara terstruktur. Sistem ini memanfaatkan integrasi AI untuk mengolah data aktivitas dan menghasilkan insight otomatis terkait pola produktivitas, efisiensi waktu, serta rekomendasi peningkatan performa. Aplikasi dibangun menggunakan Node JS sebagai backend dengan arsitektur REST API untuk memastikan komunikasi data yang efisien, serta MySQL sebagai database penyimpanan data pengguna dan laporan aktivitas. Integrasi AI API memungkinkan sistem melakukan analisis cerdas terhadap data yang diinput pengguna dan menampilkan hasil dalam bentuk ringkasan serta evaluasi otomatis. Dengan struktur onboarding yang interaktif, dashboard informatif, serta sistem autentikasi yang aman, aplikasi ini dirancang untuk memberikan pengalaman pengguna yang modern, responsif, dan mudah digunakan. Smart Report AI tidak hanya berfungsi sebagai pencatat aktivitas, tetapi juga sebagai asisten digital berbasis AI untuk meningkatkan produktivitas.',
- image: DashboardApp,
+    image: DashboardApp,
     documentation: [
       OnBoarding1,
       OnBoarding2,
@@ -56,7 +57,7 @@ const projectsData: ProjectData[] = [
     ],
     date: 'Januari 2026',
     slug: 'smart-report-ai',
-    github: 'https://github.com/barastrong/TryoutInkubasi',
+    github: 'https://github.com/barastrong/SmartReportAI',
     tags: ['Expo', 'MySQL', 'AI API Integration', 'REST API', 'Node JS'],
     fitures: [ 'User Registration & Secure Authentication', 'Interactive Onboarding Experience', 'Form Input Aktivitas Harian', 'AI-Based Activity Analysis', 'Automatic Productivity Insight Generation', 'Dashboard Monitoring Aktivitas', 'Profile & Account Management', 'RESTful API Architecture', 'Database Management menggunakan MySQL', 'AI API Integration untuk Analisis Data', 'Responsive & Modern UI Design', 'Real-time Result & Loading State Handling' ]
   },
@@ -92,6 +93,20 @@ const projectsData: ProjectData[] = [
     github: 'https://github.com/barastrong/VintageWebsite',
     tags: ['Vue JS', 'PHP', 'MySQL'],
     fitures: ['Secure User Authentication (Login, Register, Session Management)', 'Dynamic Product Categorization', 'Detailed Product Information Page', 'Real-time Product Search', 'Wishlist / Favorite Product System', 'Add to Cart & Cart Quantity Management', 'Order Confirmation & Checkout Workflow', 'Order Success Notification', 'User Transaction History Dashboard', 'User Profile Editing & Account Settings', 'Password Update System', 'Comprehensive Empty State UX Handling', 'Responsive and Modern UI Design']
+  },
+  {
+    title: 'Jemuran Otomatis',
+    shortDesc: 'Platform tes kepribadian berbasis web dengan sistem penilaian otomatis dan analisis hasil secara real-time.',
+    longDesc: 'Website Tes Kepribadian merupakan platform berbasis web yang dirancang untuk melakukan asesmen kepribadian secara digital dengan sistem penilaian otomatis. Aplikasi ini dibangun menggunakan React JS sebagai frontend dan Flask sebagai backend API, dengan MySQL sebagai database untuk menyimpan data pengguna dan hasil tes. Sistem memungkinkan pengguna untuk melakukan registrasi, menjawab serangkaian pertanyaan yang terstruktur, hingga memperoleh hasil analisis kepribadian secara otomatis setelah seluruh pertanyaan selesai dijawab. Proses pengolahan hasil dilakukan melalui backend yang menghitung skor berdasarkan kategori tertentu dan menampilkan interpretasi hasil secara dinamis. Arsitektur aplikasi menggunakan pendekatan RESTful API untuk memastikan komunikasi yang efisien antara frontend dan backend. Dengan tampilan responsif berbasis Tailwind CSS, platform ini dirancang untuk memberikan pengalaman pengguna yang interaktif, cepat, dan mudah dipahami.',
+    image: JemuranOtomatis,
+    documentation: [
+      WebTesKepribadian, RegisterTes, Question, FinalQuestion, LoadResult, Results
+    ],
+    date: 'November 2025',
+    slug: 'jemuran-otomatis',
+    github: 'https://github.com/barastrong/ProjectIOTDashboardWithFlask',
+    tags: ['Flask', 'AI API Integration', 'MySQL', 'Rest API'],
+    fitures: ['User Registration & Authentication', 'Sistem Pertanyaan Bertahap (Step-by-Step Assessment)', 'Perhitungan Skor Otomatis di Backend', 'Analisis Hasil Tes Secara Real-time', 'Halaman Hasil dengan Interpretasi Kepribadian', 'Progress Indicator saat Mengisi Tes', 'Integrasi RESTful API (React + Flask)', 'Penyimpanan Data Hasil Tes ke Database MySQL', 'Responsive UI menggunakan Tailwind CSS', 'Loading & Result State Management']
   },
   {
     title: 'Website Tes Kepribadian',
