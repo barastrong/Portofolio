@@ -11,8 +11,12 @@ import VintageWebsite from '../assets/images/VintageWebsite.png';
 import NeoManga from '../assets/images/NeoManga.png';
 import WebTesKepribadian from '../assets/images/TesKepribadian.png';
 import JemuranOtomatis from '../assets/images/DashboardIOT.png';
+import DashboardUkl from '../assets/images/UklDashboard.png'
+import DashboardSidodolan from '../assets/images/DashboardSidoDolan.png'
 
 // Documentation
+import {  AdminPanelAddProductUkl, AdminPanelProductUkl, AdminPanelUserUkl, DashboardList, DetailProductUkl, LoginUkl, RegisterUkl, ProfileUkl, OrderUkl, OrderList } from '../assets/docs/Ukls';
+import { Destination, DestinationCategory, DestinationDetail, DestinationSearch, Culiner, CulinerCategory, CulinerDetail, CulinerSearch, Hotel, HotelDetail, HotelRating, HotelSearch, Transport, TransportCategory } from '../assets/docs/LombaWebDev';
 import { LoginApp, RegisterApp, OnBoarding1, OnBoarding2, OnBoarding3, GuideBook, DashboardApp, ProfileApp, AktivitasForm, AnalisisAI, AnalisisAI2 } from '../assets/docs/SmartReportAI'
 import { LoginFitFashion, RegisterFitFashion, VerifyOTP, Profile, AdminPanelUser, AdminPanelSeller, AdminPanelSellerApproval, AdminPanelProduct, AdminPanelPurchase, AdminPanelDelivery, AdminPanelDeliveryApproval, SellerDashboard, SellerProduct, SellerAddProduct, SellerOrder, SellerProfile, RegisterSeller, SuccessRegisterSeller, DeliveryDashboard, DeliveryHistory, DeliveryPending, DeliveryProfile, DeliveryShipping, DeliveryDelivered, DeliveryDetailShipping, DeliveryDetailPickedup, DeliveryDetailDelivered, DeliveryDetailSelesai, EmptyDeliveryDashboard, RegisterDelivery, Dashboard, CategoryProduct, DetailProductFitFashion, Cart, EmptyCartFitFashion, CheckoutPage, CheckoutConfirmStatus, CheckoutCompleted, SuccessCheckout, StatusPending, StatusProcess, StatusCompleted, StatusCancelled,
 } from '../assets/docs/FitFashion';
@@ -123,6 +127,46 @@ const projectsData: ProjectData[] = [
     fitures: ['User Registration & Authentication', 'Sistem Pertanyaan Bertahap (Step-by-Step Assessment)', 'Perhitungan Skor Otomatis di Backend', 'Analisis Hasil Tes Secara Real-time', 'Halaman Hasil dengan Interpretasi Kepribadian', 'Progress Indicator saat Mengisi Tes', 'Integrasi RESTful API (React + Flask)', 'Penyimpanan Data Hasil Tes ke Database MySQL', 'Responsive UI menggunakan Tailwind CSS', 'Loading & Result State Management']
   },
   {
+    title: 'Website Sidodolan',
+    shortDesc: 'Platform informasi wisata berbasis web yang menyediakan destinasi, kuliner, hotel, dan transportasi dalam satu sistem terintegrasi.',
+    longDesc: 'Website Sidodolan merupakan platform informasi wisata berbasis web yang dirancang untuk membantu pengguna menemukan berbagai destinasi, kuliner, hotel, dan transportasi dalam satu sistem yang terintegrasi. Website ini dibangun menggunakan HTML, CSS, dan JavaScript dengan struktur antarmuka yang responsif dan navigasi yang intuitif. Sistem menyediakan fitur pencarian, kategori, serta halaman detail untuk setiap destinasi dan layanan yang tersedia. Pengguna dapat menjelajahi tempat wisata berdasarkan kategori tertentu, melihat detail informasi lengkap, hingga mengeksplorasi rekomendasi kuliner dan akomodasi pendukung perjalanan. Arsitektur front-end dirancang dengan pendekatan modular agar mudah dikembangkan dan diperluas. Dengan tampilan yang bersih dan user-friendly, Website Sidodolan berfungsi sebagai travel guide digital yang memudahkan perencanaan perjalanan secara praktis dan efisien.',
+    image: DashboardSidodolan,
+    documentation:[
+      DashboardSidodolan,
+      Destination,
+      DestinationCategory,
+      DestinationDetail,
+      DestinationSearch,
+      Culiner,
+      CulinerCategory,
+      CulinerDetail,
+      CulinerSearch,
+      Hotel,
+      HotelDetail,
+      HotelRating,
+      HotelSearch,
+      Transport,
+      TransportCategory,
+    ],
+    date: 'November 2025',
+    slug: 'sidodolan',
+    github: 'https://github.com/barastrong/FestReborn',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    fitures: [  
+      'Halaman Dashboard Informatif',
+      'Kategori Destinasi Wisata',
+      'Detail Informasi Destinasi',
+      'Sistem Pencarian Destinasi',
+      'Kategori & Detail Kuliner',
+      'Informasi Hotel & Rating',
+      'Kategori Transportasi',
+      'Navigasi Interaktif dan User-Friendly',
+      'Responsive Design (Mobile Friendly)',
+      'Struktur Front-End Modular',
+      'Dynamic Content Rendering dengan JavaScript'
+    ]
+  },
+  {
     title: 'Website NeoManga',
     shortDesc: 'Platform web baca manga modern dengan sistem autentikasi, filter kategori, bookmark, dan manajemen riwayat pengguna.',
     longDesc: 'NeoManga merupakan platform web modern untuk membaca dan mengelola koleksi manga secara online. Aplikasi ini dibangun menggunakan React JS sebagai frontend dan Laravel sebagai backend API, dengan MySQL sebagai sistem manajemen basis data. Sistem menyediakan autentikasi pengguna (login & register), fitur pencarian dan filter manga berdasarkan genre, tipe, dan status, serta halaman detail lengkap termasuk daftar chapter. Pengguna dapat menyimpan manga ke dalam bookmark, mengelola daftar bacaan, serta melihat riwayat aktivitas membaca. Arsitektur aplikasi dirancang menggunakan pendekatan RESTful API untuk memastikan pemisahan frontend dan backend yang scalable serta mudah dikembangkan. Dengan tampilan responsif berbasis Tailwind CSS, NeoManga menghadirkan pengalaman pengguna yang modern, cepat, dan terstruktur.',
@@ -146,7 +190,7 @@ const projectsData: ProjectData[] = [
     slug: 'neo-manga',
     github: 'https://github.com/barastrong/NeoManga',
     tags: ['React JS', 'Laravel', 'MySQL', 'Tailwind CSS', 'REST API'],
-    fitures: ['User Authentication (Login & Register)', 'Filter Manga berdasarkan Genre, Tipe, dan Status', 'Pencarian Manga secara Dinamis', 'Halaman Detail Manga & Daftar Chapter', 'Bookmark / Favorit Manga', 'Riwayat Aktivitas Membaca', 'Manajemen Daftar Manga', 'Sistem Order / Pembelian (jika ada)', 'RESTful API Integration (React + Laravel)', 'Responsive UI menggunakan Tailwind CSS']
+    fitures: [ 'User Authentication (Login & Register)', 'Filter Manga berdasarkan Genre, Tipe, dan Status', 'Pencarian Manga secara Dinamis', 'Halaman Detail Manga & Daftar Chapter', 'Bookmark / Favorit Manga', 'Riwayat Aktivitas Membaca', 'Manajemen Daftar Manga', 'Sistem Order / Pembelian (jika ada)', 'RESTful API Integration (React + Laravel)', 'Responsive UI menggunakan Tailwind CSS']
   },
   {
     title: 'Pig Face Filter',
@@ -292,6 +336,41 @@ const projectsData: ProjectData[] = [
     slug: 'ujian-dtp',
     github: 'https://github.com/barastrong/UjianDTP',
     tags: ['Expo', 'Firebase']
+  },
+  {
+    title: 'Website Informasi',
+    shortDesc: 'Website informasi dan manajemen produk berbasis PHP dengan sistem admin, pemesanan, dan pengelolaan data terintegrasi.',
+    longDesc: 'Website Informasi (UKLS) merupakan aplikasi berbasis web yang dikembangkan menggunakan PHP dan MySQL untuk mengelola data produk, pengguna, serta sistem pemesanan dalam satu platform terintegrasi. Sistem ini dirancang dengan dua level akses utama, yaitu admin dan user, yang masing-masing memiliki dashboard dan hak akses berbeda. Pengguna dapat melakukan registrasi, login, melihat daftar produk, mengakses detail produk, serta melakukan pemesanan yang kemudian tercatat dalam sistem order. Admin memiliki kontrol penuh terhadap pengelolaan data, termasuk menambah produk baru, mengedit informasi produk, serta mengelola data pengguna. Arsitektur aplikasi menggunakan pendekatan server-side rendering berbasis PHP dengan koneksi database MySQL untuk penyimpanan dan pengolahan data secara dinamis. Website ini dirancang dengan struktur navigasi yang sederhana dan fungsional, sehingga mudah digunakan baik oleh pengguna umum maupun administrator sistem.',
+    image: DashboardUkl,
+    documentation:[
+      LoginUkl,
+      RegisterUkl,
+      DashboardUkl,
+      DashboardList,
+      DetailProductUkl,
+      OrderUkl,
+      ProfileUkl,
+      OrderList,
+      AdminPanelUserUkl,
+      AdminPanelProductUkl,
+      AdminPanelAddProductUkl,
+    ],
+    date: 'Agustus 2024',
+    slug: 'ukls',
+    github: 'https://github.com/barastrong/UKLS',
+    tags: ['PHP', 'MySQL'],
+    fitures: [
+      'User Registration & Login System',
+      'Role-Based Access (Admin & User)',
+      'Dashboard untuk Admin dan User',
+      'Manajemen Data Produk (Tambah, Edit, Hapus)',
+      'Halaman Detail Produk',
+      'Sistem Pemesanan (Order System)',
+      'Daftar Riwayat Pesanan (Order List)',
+      'Manajemen Data Pengguna oleh Admin',
+      'Integrasi Database MySQL',
+      'Server-Side Processing menggunakan PHP'
+    ]
   },
 ];
 
