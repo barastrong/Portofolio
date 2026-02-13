@@ -15,6 +15,7 @@ import DashboardUkl from '../assets/images/UklDashboard.png'
 import DashboardSidodolan from '../assets/images/DashboardSidoDolan.png'
 
 // Documentation
+import { LoginIOT, ManualIot, OffIot } from '../assets/docs/JemuranOtomatis';
 import {  AdminPanelAddProductUkl, AdminPanelProductUkl, AdminPanelUserUkl, DashboardList, DetailProductUkl, LoginUkl, RegisterUkl, ProfileUkl, OrderUkl, OrderList } from '../assets/docs/Ukls';
 import { Destination, DestinationCategory, DestinationDetail, DestinationSearch, Culiner, CulinerCategory, CulinerDetail, CulinerSearch, Hotel, HotelDetail, HotelRating, HotelSearch, Transport, TransportCategory } from '../assets/docs/LombaWebDev';
 import { LoginApp, RegisterApp, OnBoarding1, OnBoarding2, OnBoarding3, GuideBook, DashboardApp, ProfileApp, AktivitasForm, AnalisisAI, AnalisisAI2 } from '../assets/docs/SmartReportAI'
@@ -104,7 +105,10 @@ const projectsData: ProjectData[] = [
     longDesc: 'Website Tes Kepribadian merupakan platform berbasis web yang dirancang untuk melakukan asesmen kepribadian secara digital dengan sistem penilaian otomatis. Aplikasi ini dibangun menggunakan React JS sebagai frontend dan Flask sebagai backend API, dengan MySQL sebagai database untuk menyimpan data pengguna dan hasil tes. Sistem memungkinkan pengguna untuk melakukan registrasi, menjawab serangkaian pertanyaan yang terstruktur, hingga memperoleh hasil analisis kepribadian secara otomatis setelah seluruh pertanyaan selesai dijawab. Proses pengolahan hasil dilakukan melalui backend yang menghitung skor berdasarkan kategori tertentu dan menampilkan interpretasi hasil secara dinamis. Arsitektur aplikasi menggunakan pendekatan RESTful API untuk memastikan komunikasi yang efisien antara frontend dan backend. Dengan tampilan responsif berbasis Tailwind CSS, platform ini dirancang untuk memberikan pengalaman pengguna yang interaktif, cepat, dan mudah dipahami.',
     image: JemuranOtomatis,
     documentation: [
-      WebTesKepribadian, RegisterTes, Question, FinalQuestion, LoadResult, Results
+        LoginIOT,
+        JemuranOtomatis,
+        ManualIot,
+        OffIot,
     ],
     date: 'November 2025',
     slug: 'jemuran-otomatis',
