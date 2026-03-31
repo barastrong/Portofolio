@@ -13,6 +13,7 @@ import WebTesKepribadian from '../assets/images/TesKepribadian.png';
 import JemuranOtomatis from '../assets/images/DashboardIOT.png';
 import DashboardUkl from '../assets/images/UklDashboard.png'
 import DashboardSidodolan from '../assets/images/DashboardSidoDolan.png'
+import NusaExplore from '../assets/images/NusaExplore.png';
 
 // Documentation
 import { LoginIOT, ManualIot, OffIot } from '../assets/docs/JemuranOtomatis';
@@ -42,6 +43,31 @@ export interface ProjectData {
 }
 
 const projectsData: ProjectData[] = [
+  {
+    title: 'Website NusaExplore',
+    shortDesc: 'Aplikasi pelaporan aktivitas berbasis AI yang membantu pengguna mencatat, menganalisis, dan mendapatkan insight produktivitas secara otomatis.',
+    longDesc: 'Aplikasi Report Aktivitas (Smart Report AI) merupakan platform berbasis web/mobile yang dirancang untuk membantu pengguna dalam mencatat dan menganalisis aktivitas harian secara terstruktur. Sistem ini memanfaatkan integrasi AI untuk mengolah data aktivitas dan menghasilkan insight otomatis terkait pola produktivitas, efisiensi waktu, serta rekomendasi peningkatan performa. Aplikasi dibangun menggunakan Node JS sebagai backend dengan arsitektur REST API untuk memastikan komunikasi data yang efisien, serta MySQL sebagai database penyimpanan data pengguna dan laporan aktivitas. Integrasi AI API memungkinkan sistem melakukan analisis cerdas terhadap data yang diinput pengguna dan menampilkan hasil dalam bentuk ringkasan serta evaluasi otomatis. Dengan struktur onboarding yang interaktif, dashboard informatif, serta sistem autentikasi yang aman, aplikasi ini dirancang untuk memberikan pengalaman pengguna yang modern, responsif, dan mudah digunakan. Smart Report AI tidak hanya berfungsi sebagai pencatat aktivitas, tetapi juga sebagai asisten digital berbasis AI untuk meningkatkan produktivitas.',
+    image: NusaExplore,
+    // documentation: [
+    //   OnBoarding1,
+    //   OnBoarding2,
+    //   OnBoarding3,
+    //   LoginApp,
+    //   RegisterApp,
+    //   GuideBook,
+    //   DashboardApp,
+    //   AktivitasForm,
+    //   AnalisisAI,
+    //   AnalisisAI2,
+    //   ProfileApp,
+    // ],
+    date: 'Maret 2026',
+    slug: 'nusa-explore',
+    pptLink:"https://canva.link/n5xfycjkf30l8s8",
+    github: 'https://github.com/barastrong/nusaexplore',
+    tags: ['React JS','CSS Style','Local Storage','Node JS'],
+    // fitures: [ 'User Registration & Secure Authentication', 'Interactive Onboarding Experience', 'Form Input Aktivitas Harian', 'AI-Based Activity Analysis', 'Automatic Productivity Insight Generation', 'Dashboard Monitoring Aktivitas', 'Profile & Account Management', 'RESTful API Architecture', 'Database Management menggunakan MySQL', 'AI API Integration untuk Analisis Data', 'Responsive & Modern UI Design', 'Real-time Result & Loading State Handling' ]
+  },
   {
     title: 'Aplikasi Report Aktivitas',
     shortDesc: 'Aplikasi pelaporan aktivitas berbasis AI yang membantu pengguna mencatat, menganalisis, dan mendapatkan insight produktivitas secara otomatis.',
