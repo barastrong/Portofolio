@@ -1,98 +1,74 @@
+/* ===== CARTOON PROJECT CARD ===== */
+
 .project-card {
-  background: var(--card-bg);
+  background: var(--card-bg, #FFFFFF);
   border-radius: 20px;
-  border: 2px solid var(--component-border);
+  border: 3px solid var(--border-color, #2D2D2D);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--card-shadow);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
+  box-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
   z-index: 1;
   position: relative;
 }
 
+/* Remove old gradient mask pseudo */
 .project-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 20px;
-  padding: 2px;
-  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
-
-.project-card:hover::before {
-  opacity: 1;
+  display: none;
 }
 
 .project-card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translate(-4px, -6px);
   z-index: 10;
-  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.2), 0 8px 24px rgba(0, 0, 0, 0.1);
-  border-color: transparent;
+  box-shadow: 9px 11px 0px var(--border-color, #2D2D2D);
 }
 
 .project-card-image-wrapper {
   height: 220px;
   overflow: hidden;
   position: relative;
+  border-bottom: 3px solid var(--border-color, #2D2D2D);
 }
 
+/* Remove old gradient overlay */
 .project-card-image-wrapper::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.project-card:hover .project-card-image-wrapper::after {
-  opacity: 1;
+  display: none;
 }
 
 .project-card-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .project-card:hover .project-card-image {
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
 
 .project-card-date {
   position: absolute;
-  top: 0.875rem;
-  right: 0.875rem;
+  top: 0.75rem;
+  right: 0.75rem;
   z-index: 4;
-  background: var(--card-date-bg);
-  backdrop-filter: blur(12px);
-  color: var(--card-date-text);
-  padding: 0.4rem 0.875rem;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border: 1px solid var(--component-border);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--sunny, #FFD93D);
+  color: var(--text-dark, #2D2D2D);
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  border: 2.5px solid var(--border-color, #2D2D2D);
+  box-shadow: 2px 2px 0px var(--border-color, #2D2D2D);
+  font-family: var(--font-body, 'Nunito');
 }
 
 .project-content {
-  padding: 1.75rem;
+  padding: 1.5rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: var(--card-bg);
+  background: var(--card-bg, #FFFFFF);
   position: relative;
   z-index: 1;
 }
@@ -100,44 +76,53 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  min-height: 80px;
+  gap: 0.45rem;
+  min-height: 70px;
   align-content: flex-start;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
+/* Colorful cartoon tags */
 .tag {
-  background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
-  color: var(--tag-text);
-  padding: 0.35rem 0.9rem;
-  border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  border: 1px solid var(--tag-border);
-  transition: all 0.3s ease;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  border: 2px solid var(--border-color, #2D2D2D);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--text-dark, #2D2D2D);
+  font-family: var(--font-body, 'Nunito');
+  background: #FFE8E8;
 }
+
+.tag:nth-child(2) { background: #E8F4FD; }
+.tag:nth-child(3) { background: #E8FFF0; }
+.tag:nth-child(4) { background: #F3E8FF; }
+.tag:nth-child(5) { background: #FFF8E1; }
+.tag:nth-child(6) { background: #FFE0F0; }
+.tag:nth-child(7) { background: #E0F7FA; }
 
 .tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.15);
+  transform: translateY(-3px) rotate(-2deg);
+  box-shadow: 2px 2px 0px var(--border-color, #2D2D2D);
 }
 
 .project-content h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.875rem;
-  color: var(--heading-color);
-  font-weight: 800;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--heading-color, #2D2D2D);
+  font-weight: 700;
   line-height: 1.3;
-  font-family: var(--font-heading);
-  letter-spacing: -0.3px;
+  font-family: var(--font-heading, 'Fredoka');
 }
 
 .project-content p {
-  color: var(--text-color);
+  color: var(--text-body, #4A4A4A);
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   line-height: 1.7;
   flex-grow: 1;
+  font-weight: 500;
 }
 
 .project-links {
@@ -145,10 +130,10 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   margin-top: auto;
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   min-height: 60px;
   align-items: center;
-  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  border-top: 3px dashed #E0E0E0;
 }
 
 .project-card .btn {
@@ -156,45 +141,44 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.35rem;
-  border-radius: 10px;
-  font-size: 0.9rem;
-  font-weight: 700;
+  padding: 0.55rem 1.2rem;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 800;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
   position: relative;
   overflow: hidden;
+  font-family: var(--font-body, 'Nunito');
 }
 
 .project-card .btn-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: var(--coral, #FF6B6B);
   color: white;
-  border: none;
-  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35), 0 2px 8px rgba(139, 92, 246, 0.2);
-  transition: all 0.3s ease;
+  border: 2.5px solid var(--border-color, #2D2D2D);
+  box-shadow: 3px 3px 0px var(--border-color, #2D2D2D);
 }
 
 .project-card .btn-primary:hover {
-  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  background: var(--coral-dark, #E85555);
   color: white;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 28px rgba(99, 102, 241, 0.45), 0 4px 16px rgba(139, 92, 246, 0.3);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
 }
 
 .project-card .btn-secondary {
-  background: var(--btn-secondary-bg);
-  color: var(--btn-secondary-text);
-  border: 1px solid var(--btn-secondary-border);
-  backdrop-filter: blur(8px);
+  background: var(--bg-white, #FFFFFF);
+  color: var(--text-dark, #2D2D2D);
+  border: 2.5px solid var(--border-color, #2D2D2D);
+  box-shadow: 3px 3px 0px var(--border-color, #2D2D2D);
 }
 
 .project-card .btn-secondary:hover {
-  background: var(--btn-secondary-bg-hover);
-  color: var(--btn-secondary-text-hover);
-  transform: translateY(-2px);
-  border-color: var(--accent-primary);
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+  background: var(--sunny, #FFD93D);
+  color: var(--text-dark, #2D2D2D);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
 }
 
 .project-card .btn-secondary svg,
