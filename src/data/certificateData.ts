@@ -11,6 +11,7 @@ import Frontend from '../assets/images/Cert_Frontend.jpg'
 import EnglishFirst from '../assets/images/Cert_EFBook2.jpeg'
 import EFELevel1 from '../assets/images/Cert_EFEBasic1.jpeg'
 import EFELevel2 from '../assets/images/Cert_EFEBasic2.jpeg'
+import WebDev2 from '../assets/images/Cert__Webdev2.png';
 
 
 
@@ -24,6 +25,14 @@ export interface CertificateData {
 }
 
 const certificateData: CertificateData[] = [
+  {
+    date: 'April 2026',
+    image: WebDev2,
+    title: 'Peserta Lomba Web Development Tingkat SMA/SMK dan Mahasiswa',
+    course: 'SOEGIJAPRANATA CATHOLIC UNIVERSITY',
+    description: 'Sertifikat penyelesaian program pembelajaran Bahasa Inggris tingkat Adult Level 2 dengan total 24 jam pembelajaran. Program ini menekankan peningkatan kemampuan speaking, listening, reading, dan writing melalui partisipasi aktif di kelas serta evaluasi berbasis kompetensi.',
+    list: ['React JS', 'CSS Style', 'Local Storage']
+  },
   {
     date: 'Februari 2026',
     image: EFELevel2,
