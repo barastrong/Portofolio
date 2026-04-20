@@ -1,3 +1,5 @@
+/* ===== CARTOON PROJECT PAGE ===== */
+
 .project-page-container {
   padding: 120px 2rem 4rem;
 }
@@ -10,27 +12,43 @@
 
 .project-page-title {
   font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--heading-color);
+  color: var(--heading-color, #2D2D2D);
+  font-family: var(--font-heading, 'Fredoka');
 }
 
 .project-page-title span {
-  color: var(--accent-color);
+  color: var(--coral, #FF6B6B);
+  position: relative;
+}
+
+.project-page-title span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -4px;
+  right: -4px;
+  height: 8px;
+  background: var(--sunny, #FFD93D);
+  border-radius: 4px;
+  z-index: -1;
+  transform: rotate(-1deg);
 }
 
 .project-page-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.7;
-  color: var(--text-color);
+  color: var(--text-body, #4A4A4A);
   max-width: 650px;
   margin: 0 auto;
+  font-weight: 500;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
