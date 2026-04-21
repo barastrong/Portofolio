@@ -1,17 +1,17 @@
-import AppDev from '../assets/images/Cert_AppDev.jpg';
-import WebDev from '../assets/images/Cert_WebDev.jpg';
-import GameDev from '../assets/images/Cert_GameDev.jpg';
-import Beginner from '../assets/images/Cert_Beginner.jpg';
-import TeensAi from '../assets/images/Cert_TeensAi.jpg';
-import Webinar from '../assets/images/WebinerNetworking.jpg';
-import Elevaite from '../assets/images/elevaite.jpg'
-import Mecnesia from '../assets/images/Cert_Mecnesia.jpg'
-import PesertaLombaWebDev from '../assets/images/Cert_PesertaLomba.jpg'
-import Frontend from '../assets/images/Cert_Frontend.jpg'
-import EnglishFirst from '../assets/images/Cert_EFBook2.jpeg'
-import EFELevel1 from '../assets/images/Cert_EFEBasic1.jpeg'
-import EFELevel2 from '../assets/images/Cert_EFEBasic2.jpeg'
-import WebDev2 from '../assets/images/Cert__Webdev2.png';
+import AppDev from '../assets/images/Cert_AppDev.webp';
+import WebDev from '../assets/images/Cert_WebDev.webp';
+import GameDev from '../assets/images/Cert_GameDev.webp';
+import Beginner from '../assets/images/Cert_Beginner.webp';
+import TeensAi from '../assets/images/Cert_TeensAi.webp';
+import Webinar from '../assets/images/WebinerNetworking.webp';
+import Elevaite from '../assets/images/elevaite.webp'
+import Mecnesia from '../assets/images/Cert_Mecnesia.webp'
+import PesertaLombaWebDev from '../assets/images/Cert_PesertaLomba.webp'
+import Frontend from '../assets/images/Cert_Frontend.webp'
+import EnglishFirst from '../assets/images/Cert_EFBook2.webp'
+import EFELevel1 from '../assets/images/Cert_EFEBasic1.webp'
+import EFELevel2 from '../assets/images/Cert_EFEBasic2.webp'
+import WebDev2 from '../assets/images/Cert__Webdev2.webp';
 
 
 

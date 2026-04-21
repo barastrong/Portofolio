@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
-import ProfileImage from '../assets/Profile.jpg';
+import ProfileImage from '../assets/Profile.webp';
 import '../css/Profile.css';
 
 const cardContainerVariants = {

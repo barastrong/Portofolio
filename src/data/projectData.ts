@@ -1,19 +1,19 @@
 // Images
-import PigFilter from '../assets/images/pigFilter.png';
-import Epicurean from '../assets/images/Epicurean.png';
-import BintangArga from '../assets/images/argabintang.png';
-import UjianDTP from '../assets/images/UjianDTP.png';
-import SongData from '../assets/images/SongData.png';
-import Notepad from '../assets/images/NotePad.png';
-import HighwayTracker from '../assets/images/Highway_Tracker.png';
-import DectectionObjectVideo from '../assets/images/Detection_Object_Video.png';
-import VintageWebsite from '../assets/images/VintageWebsite.png';
-import NeoManga from '../assets/images/NeoManga.png';
-import WebTesKepribadian from '../assets/images/TesKepribadian.png';
-import JemuranOtomatis from '../assets/images/DashboardIOT.png';
-import DashboardUkl from '../assets/images/UklDashboard.png'
-import DashboardSidodolan from '../assets/images/DashboardSidoDolan.png'
-import NusaExplore from '../assets/images/NusaExplore.png';
+import PigFilter from '../assets/images/pigFilter.webp';
+import Epicurean from '../assets/images/Epicurean.webp';
+import BintangArga from '../assets/images/argabintang.webp';
+import UjianDTP from '../assets/images/UjianDTP.webp';
+import SongData from '../assets/images/SongData.webp';
+import Notepad from '../assets/images/NotePad.webp';
+import HighwayTracker from '../assets/images/Highway_Tracker.webp';
+import DectectionObjectVideo from '../assets/images/Detection_Object_Video.webp';
+import VintageWebsite from '../assets/images/VintageWebsite.webp';
+import NeoManga from '../assets/images/NeoManga.webp';
+import WebTesKepribadian from '../assets/images/TesKepribadian.webp';
+import JemuranOtomatis from '../assets/images/DashboardIOT.webp';
+import DashboardUkl from '../assets/images/UklDashboard.webp'
+import DashboardSidodolan from '../assets/images/DashboardSidoDolan.webp'
+import NusaExplore from '../assets/images/NusaExplore.webp';
 
 // Documentation
 import { LoginIOT, ManualIot, OffIot } from '../assets/docs/JemuranOtomatis';

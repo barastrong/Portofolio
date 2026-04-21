@@ -1,4 +1,4 @@
-import Bottle from './Bottle.png';
-import Person from './Person.png';
+import Bottle from './Bottle.webp';
+import Person from './Person.webp';
 
 export {Bottle, Person};
