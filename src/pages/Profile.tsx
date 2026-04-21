@@ -58,7 +58,7 @@ const Profile: React.FC = () => {
           
           <motion.div className="profile-social-links" variants={itemVariants}>
             <a 
-              href="https://linkedin.com/in/bintang-bara-adyasta-348237322" 
+              href="https://linkedin.com/in/bintangbaraadyasta" 
               target="_blank" 
               rel="noopener noreferrer" 
               aria-label="LinkedIn"
