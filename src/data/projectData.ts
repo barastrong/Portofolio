@@ -26,6 +26,7 @@ import { RegisterTes, Question, FinalQuestion, LoadResult, Results } from '../as
 import { Person, Bottle } from '../assets/docs/Detection_Object_Open_Camera';
 import { LoginNeo, RegisterNeo, MangaStatus, MangaType, MangaGenre, MangaSearch, MangaDetail, DetailChapter, MangaBookmark, MangaList, MangaOrder, MangaHistory } from '../assets/docs/NeoManga';
 import { Login, Register, LandingPage, CategoryProducts, ProductPage, DetailProduct, SearchPage, FavoriteProducts, CartPage, OrderConfirmation, SuccessOrder, SuccessCart, TransactionHistory, EditProfile, ChangePassword, EmptyCart, EmptyFavorite, EmptyHistory, EmptySearch } from '../assets/docs/Vintage_Website';
+import { Beranda, Map, DetailMap, GameMap, GameMapDetail, QuizGame, PuzzleGame } from '../assets/docs/NusaExplore';
 
 export interface ProjectData {
   title: string;
@@ -40,33 +41,31 @@ export interface ProjectData {
   tags: string[];
   fitures?: string[];
   type?: string[];
+  link?: string;
 }
 
 const projectsData: ProjectData[] = [
   {
     title: 'Website NusaExplore',
-    shortDesc: 'Aplikasi pelaporan aktivitas berbasis AI yang membantu pengguna mencatat, menganalisis, dan mendapatkan insight produktivitas secara otomatis.',
-    longDesc: 'Aplikasi Report Aktivitas (Smart Report AI) merupakan platform berbasis web/mobile yang dirancang untuk membantu pengguna dalam mencatat dan menganalisis aktivitas harian secara terstruktur. Sistem ini memanfaatkan integrasi AI untuk mengolah data aktivitas dan menghasilkan insight otomatis terkait pola produktivitas, efisiensi waktu, serta rekomendasi peningkatan performa. Aplikasi dibangun menggunakan Node JS sebagai backend dengan arsitektur REST API untuk memastikan komunikasi data yang efisien, serta MySQL sebagai database penyimpanan data pengguna dan laporan aktivitas. Integrasi AI API memungkinkan sistem melakukan analisis cerdas terhadap data yang diinput pengguna dan menampilkan hasil dalam bentuk ringkasan serta evaluasi otomatis. Dengan struktur onboarding yang interaktif, dashboard informatif, serta sistem autentikasi yang aman, aplikasi ini dirancang untuk memberikan pengalaman pengguna yang modern, responsif, dan mudah digunakan. Smart Report AI tidak hanya berfungsi sebagai pencatat aktivitas, tetapi juga sebagai asisten digital berbasis AI untuk meningkatkan produktivitas.',
+    shortDesc: 'Platform interaktif untuk menjelajahi kekayaan budaya Indonesia melalui peta digital, mini games edukatif, dan sistem eksplorasi berbasis progress.',
+    longDesc: 'NusaExplore adalah platform edukasi budaya Indonesia berbasis web yang dirancang untuk memberikan pengalaman eksplorasi interaktif terhadap keberagaman budaya Nusantara. Aplikasi ini mengintegrasikan peta digital berbasis SVG dengan 34 provinsi yang dapat dijelajahi secara langsung oleh pengguna untuk melihat informasi budaya, wisata, dan karakteristik daerah secara detail. Selain eksplorasi peta, NusaExplore menghadirkan sistem gamifikasi melalui mini games edukatif seperti quiz budaya dan puzzle Nusantara yang dirancang untuk meningkatkan pemahaman pengguna secara menyenangkan. Sistem unlock berbasis progress memungkinkan pengguna membuka wilayah baru menggunakan reward yang diperoleh dari permainan, menciptakan pengalaman belajar yang engaging dan terstruktur. Aplikasi ini dibangun menggunakan React JS dengan Vite sebagai build tool untuk performa optimal, serta memanfaatkan LocalStorage untuk menyimpan progress pengguna secara client-side. Integrasi teknologi seperti Canvas API digunakan dalam fitur puzzle game, sementara Intersection Observer API mendukung animasi interaktif saat scrolling. Dengan dukungan dark/light mode, desain responsif, serta UI modern berbasis CSS custom properties, NusaExplore tidak hanya menjadi media pembelajaran, tetapi juga platform eksplorasi digital yang menarik, ringan, dan mudah diakses di berbagai perangkat.',
     image: NusaExplore,
-    // documentation: [
-    //   OnBoarding1,
-    //   OnBoarding2,
-    //   OnBoarding3,
-    //   LoginApp,
-    //   RegisterApp,
-    //   GuideBook,
-    //   DashboardApp,
-    //   AktivitasForm,
-    //   AnalisisAI,
-    //   AnalisisAI2,
-    //   ProfileApp,
-    // ],
+    documentation: [
+      Beranda,
+      Map,
+      DetailMap,
+      GameMap,
+      GameMapDetail,
+      QuizGame,
+      PuzzleGame,
+    ],
     date: 'Maret 2026',
     slug: 'nusa-explore',
     pptLink:"https://canva.link/n5xfycjkf30l8s8",
+    link: "https://nusaexplore.vercel.app/",
     github: 'https://github.com/barastrong/nusaexplore',
     tags: ['React JS','CSS Style','Local Storage','Node JS'],
-    // fitures: [ 'User Registration & Secure Authentication', 'Interactive Onboarding Experience', 'Form Input Aktivitas Harian', 'AI-Based Activity Analysis', 'Automatic Productivity Insight Generation', 'Dashboard Monitoring Aktivitas', 'Profile & Account Management', 'RESTful API Architecture', 'Database Management menggunakan MySQL', 'AI API Integration untuk Analisis Data', 'Responsive & Modern UI Design', 'Real-time Result & Loading State Handling' ]
+    fitures: [ 'Interactive Indonesia Map (34 Provinces)', 'Province Detail Information (Culture, Tourism, Culinary)', 'Map-Based Unlock Exploration System', 'Mini Games (Quiz Budaya & Puzzle Nusantara)', 'Reward & Key System', 'Progress Tracking with LocalStorage', 'Dark / Light Mode Toggle', 'Responsive Design (Mobile-Friendly)', 'Smooth Animations & Scroll Effects']
   },
   {
     title: 'Aplikasi Report Aktivitas',
@@ -180,6 +179,7 @@ const projectsData: ProjectData[] = [
     ],
     date: 'November 2025',
     slug: 'sidodolan',
+    link: 'https://sidodolan.netlify.app/',
     github: 'https://github.com/barastrong/FestReborn',
     tags: ['HTML', 'CSS', 'JavaScript'],
     fitures: [  
@@ -218,8 +218,9 @@ const projectsData: ProjectData[] = [
     ],
     date: 'Agustus 2025',
     slug: 'neo-manga',
+    link: 'https://backend-neo-manga.vercel.app/',
     github: 'https://github.com/barastrong/NeoManga',
-    tags: ['React JS', 'Laravel', 'MySQL', 'Tailwind CSS', 'REST API'],
+    tags: ['Laravel', 'Supabase', 'Tailwind', 'REST API'],
     fitures: [ 'User Authentication (Login & Register)', 'Filter Manga berdasarkan Genre, Tipe, dan Status', 'Pencarian Manga secara Dinamis', 'Halaman Detail Manga & Daftar Chapter', 'Bookmark / Favorit Manga', 'Riwayat Aktivitas Membaca', 'Manajemen Daftar Manga', 'Sistem Order / Pembelian (jika ada)', 'RESTful API Integration (React + Laravel)', 'Responsive UI menggunakan Tailwind CSS']
   },
   {

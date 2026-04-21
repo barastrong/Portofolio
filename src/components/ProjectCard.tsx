@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import type { MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaFilePowerpoint } from 'react-icons/fa';
+import { FaGithub, FaFilePowerpoint, FaLink } from 'react-icons/fa';
 import type { Variants } from 'framer-motion';
 import type { ProjectData } from '../data/projectData';
 import '../css/ProjectCard.css';
@@ -84,6 +84,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, variants }) => {
               {project.pptLink && (
                 <a href={project.pptLink} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                   <FaFilePowerpoint /> Presentasi
+                </a>
+              )}  
+              {project.link && (
+                <a href={project.link} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <FaLink /> Link
                 </a>
               )}
             </div>

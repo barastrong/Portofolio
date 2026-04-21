@@ -30,7 +30,7 @@ const certificateData: CertificateData[] = [
     image: WebDev2,
     title: 'Peserta Lomba Web Development Tingkat SMA/SMK dan Mahasiswa',
     course: 'SOEGIJAPRANATA CATHOLIC UNIVERSITY',
-    description: 'Sertifikat penyelesaian program pembelajaran Bahasa Inggris tingkat Adult Level 2 dengan total 24 jam pembelajaran. Program ini menekankan peningkatan kemampuan speaking, listening, reading, dan writing melalui partisipasi aktif di kelas serta evaluasi berbasis kompetensi.',
+    description: 'Berpartisipasi dalam lomba Web Development tingkat SMA/SMK dan Mahasiswa dengan fokus pada pengembangan aplikasi web berbasis modern. Kompetisi ini menguji kemampuan dalam perancangan UI/UX, implementasi frontend menggunakan React JS, pengelolaan styling dengan CSS, serta pemanfaatan Local Storage untuk pengolahan data di sisi klien.',
     list: ['React JS', 'CSS Style', 'Local Storage']
   },
   {
@@ -61,8 +61,9 @@ const certificateData: CertificateData[] = [
     date: 'November 2025',
     image: Mecnesia,
     title: 'Kursus Bahasa Inggris Dasar',
-    course: 'Mecnesia Academy',
+    course: 'Mecnesia - sidoarjo',
     description: 'Sertifikat kursus Bahasa Inggris tingkat dasar yang berfokus pada peningkatan kemampuan grammar, vocabulary, reading, writing, dan conversation. Program ini dirancang untuk membangun fondasi komunikasi yang baik dalam konteks akademik maupun profesional.',
+    list: ['Basic Grammar', 'Vocabulary', 'Reading', 'Writing', 'Conversation']
   },
   {
     date: 'November 2025',
