@@ -1,15 +1,15 @@
-import LoginNeo from './Login.png';
-import RegisterNeo from './Register.png';
-import MangaStatus from './MangaStatus.png';
-import MangaType from './MangaType.png';
-import MangaGenre from './MangaGenre.png';
-import MangaSearch from './MangaSearch.png';
-import MangaDetail from './MangaDetail.png';
-import MangaBookmark from './MangaBookmark.png';
-import MangaList from './MangaList.png';
-import MangaOrder from './MangaOrder.png';
-import MangaHistory from './MangaHistory.png';
-import DetailChapter from './DetailChapter.png';
+import LoginNeo from './Login.webp';
+import RegisterNeo from './Register.webp';
+import MangaStatus from './MangaStatus.webp';
+import MangaType from './MangaType.webp';
+import MangaGenre from './MangaGenre.webp';
+import MangaSearch from './MangaSearch.webp';
+import MangaDetail from './MangaDetail.webp';
+import MangaBookmark from './MangaBookmark.webp';
+import MangaList from './MangaList.webp';
+import MangaOrder from './MangaOrder.webp';
+import MangaHistory from './MangaHistory.webp';
+import DetailChapter from './DetailChapter.webp';
 
 export {
   LoginNeo,

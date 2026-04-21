@@ -1,13 +1,13 @@
-import AdminPanelAddProductUkl from './AdminPanelAddProduct.png'
-import AdminPanelProductUkl from './AdminPanelProduct.png'
-import DashboardList from './DashboardList.png'
-import DetailProductUkl from './DetailProduct.png'
-import LoginUkl from './Login.png'
-import RegisterUkl from './Register.png'
-import ProfileUkl from './Profile.png'
-import OrderUkl from './Order.png'
-import OrderList from './OrderList.png'
-import AdminPanelUserUkl from './AdminPanelUser.png'
+import AdminPanelAddProductUkl from './AdminPanelAddProduct.webp'
+import AdminPanelProductUkl from './AdminPanelProduct.webp'
+import DashboardList from './DashboardList.webp'
+import DetailProductUkl from './DetailProduct.webp'
+import LoginUkl from './Login.webp'
+import RegisterUkl from './Register.webp'
+import ProfileUkl from './Profile.webp'
+import OrderUkl from './Order.webp'
+import OrderList from './OrderList.webp'
+import AdminPanelUserUkl from './AdminPanelUser.webp'
 export {
   AdminPanelAddProductUkl,
   AdminPanelProductUkl,

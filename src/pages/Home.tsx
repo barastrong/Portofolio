@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../css/Home.css';
 import { FaReact, FaLaravel, FaGithub } from 'react-icons/fa';
-import ProfileImage from '../assets/Profile.jpg';
+import ProfileImage from '../assets/Profile.webp';
 import { SiMysql } from 'react-icons/si';
 import projectsData from '../data/projectData';
 import certificateData from '../data/certificateData';
