@@ -12,6 +12,7 @@ import EnglishFirst from '../assets/images/Cert_EFBook2.webp'
 import EFELevel1 from '../assets/images/Cert_EFEBasic1.webp'
 import EFELevel2 from '../assets/images/Cert_EFEBasic2.webp'
 import WebDev2 from '../assets/images/Cert__Webdev2.webp';
+import EFELevel3 from '../assets/images/Cert_EFEBasic3.webp';
 
 
 
@@ -25,6 +26,14 @@ export interface CertificateData {
 }
 
 const certificateData: CertificateData[] = [
+  {
+    date: 'May 2026',
+    image: EFELevel3,
+    title: 'English Program - Adult Level 3',
+    course: 'English For Everyone (EFE Indonesia)',
+    description: 'Sertifikat penyelesaian program pembelajaran Bahasa Inggris tingkat Adult Level 3 dengan total 24 jam pembelajaran. Fokus pembelajaran meliputi lanjutan grammar, vocabulary, conversation practice, serta penguatan kepercayaan diri dalam komunikasi Bahasa Inggris.',
+    list: ['Advanced Grammar', 'Vocabulary', 'Conversation Practice']
+  },
   {
     date: 'April 2026',
     image: WebDev2,

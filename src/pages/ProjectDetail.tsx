@@ -159,7 +159,7 @@ const ProjectDetail: React.FC = () => {
             onClick={handleCloseImage}
             aria-label="Close image"
             style={{
-              position: 'absolute',
+              position: 'fixed',
               top: '20px',
               right: '20px',
               background: 'none',
@@ -167,7 +167,8 @@ const ProjectDetail: React.FC = () => {
               color: 'white',
               fontSize: '2rem',
               cursor: 'pointer',
-              lineHeight: 1
+              lineHeight: 1,
+              zIndex: 1010
             }}
           >
             &times;
