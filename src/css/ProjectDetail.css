@@ -285,19 +285,19 @@
   inset: 0;
   background-color: rgba(0, 0, 0, 0.88);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   z-index: 1000;
-  padding: 2rem;
+  padding: 4rem 2rem;
   cursor: zoom-out;
+  overflow-y: auto;
 }
 
 .image-modal-content {
   max-width: 95vw;
-  max-height: 95vh;
-  object-fit: contain;
+  height: auto;
   border-radius: 12px;
   border: 4px solid white;
+  margin: auto;
 }
 
 /* Responsive */
