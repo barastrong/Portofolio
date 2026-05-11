@@ -67,6 +67,42 @@ const gridItemVariants = {
 } as const;
 
 
+const GithubGraph: React.FC = () => {
+  const [loaded, setLoaded] = React.useState(false);
+  const [error, setError] = React.useState(false);
+
+  return (
+    <div className="github-graph-inner">
+      {!loaded && !error && (
+        <div className="github-graph-skeleton">
+          {Array.from({ length: 7 }).map((_, i) => (
+            <div key={i} className="skeleton-row">
+              {Array.from({ length: 53 }).map((_, j) => (
+                <div key={j} className="skeleton-cell" />
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+      {error && (
+        <div className="github-graph-error">
+          <FaGithub />
+          <p>Tidak dapat memuat grafik kontribusi.</p>
+          <a href="https://github.com/barastrong" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">Buka GitHub</a>
+        </div>
+      )}
+      <img
+        src={`https://ghchart.rshah.org/FF6B6B/barastrong`}
+        alt="GitHub Contributions Chart barastrong"
+        className={`github-chart-img ${loaded ? 'loaded' : 'loading'}`}
+        onLoad={() => setLoaded(true)}
+        onError={() => setError(true)}
+        style={{ display: error ? 'none' : undefined }}
+      />
+    </div>
+  );
+};
+
 const Home: React.FC = () => {
   return (
     <motion.div
@@ -172,6 +208,43 @@ const Home: React.FC = () => {
           variants={gridItemVariants}
         >
           <Link to="/project" className="btn btn-secondary">Lihat Semua Proyek</Link>
+        </motion.div>
+      </motion.section>
+
+      {/* GitHub Contributions Section */}
+      <motion.section
+        className="page-section"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+      >
+        <motion.h2 className="section-title" variants={gridItemVariants}>
+          GitHub <span>Contributions</span>
+        </motion.h2>
+        <motion.div className="github-contributions-wrapper" variants={gridItemVariants}>
+          <div className="github-contrib-header">
+            <img
+              src="https://avatars.githubusercontent.com/barastrong"
+              alt="barastrong GitHub avatar"
+              className="github-contrib-avatar"
+            />
+            <div>
+              <span className="github-contrib-username">Bara</span>
+              <span className="github-contrib-label">@barastrong · Aktivitas Kontribusi</span>
+            </div>
+            <a
+              href="https://github.com/barastrong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary github-contrib-btn"
+            >
+              Lihat Profil
+            </a>
+          </div>
+          <div className="github-contrib-graph">
+            <GithubGraph />
+          </div>
         </motion.div>
       </motion.section>
     </motion.div>
