@@ -45,6 +45,28 @@ export interface ProjectData {
 }
 
 const projectsData: ProjectData[] = [
+    {
+    title: 'Website NusaQuest',
+    shortDesc: 'Platform interaktif untuk menjelajahi kekayaan budaya Indonesia melalui peta digital, mini games edukatif, dan sistem eksplorasi berbasis progress.',
+    longDesc: 'NusaQuest adalah platform edukasi budaya Indonesia berbasis web yang dirancang untuk memberikan pengalaman eksplorasi interaktif terhadap keberagaman budaya Nusantara. Aplikasi ini mengintegrasikan peta digital berbasis SVG dengan 34 provinsi yang dapat dijelajahi secara langsung oleh pengguna untuk melihat informasi budaya, wisata, dan karakteristik daerah secara detail. Selain eksplorasi peta, NusaExplore menghadirkan sistem gamifikasi melalui mini games edukatif seperti quiz budaya dan puzzle Nusantara yang dirancang untuk meningkatkan pemahaman pengguna secara menyenangkan. Sistem unlock berbasis progress memungkinkan pengguna membuka wilayah baru menggunakan reward yang diperoleh dari permainan, menciptakan pengalaman belajar yang engaging dan terstruktur. Aplikasi ini dibangun menggunakan React JS dengan Vite sebagai build tool untuk performa optimal, serta memanfaatkan LocalStorage untuk menyimpan progress pengguna secara client-side. Integrasi teknologi seperti Canvas API digunakan dalam fitur puzzle game, sementara Intersection Observer API mendukung animasi interaktif saat scrolling. Dengan dukungan dark/light mode, desain responsif, serta UI modern berbasis CSS custom properties, NusaExplore tidak hanya menjadi media pembelajaran, tetapi juga platform eksplorasi digital yang menarik, ringan, dan mudah diakses di berbagai perangkat.',
+    image: NusaExplore,
+    documentation: [
+      Beranda,
+      Map,
+      DetailMap,
+      GameMap,
+      GameMapDetail,
+      QuizGame,
+      PuzzleGame,
+    ],
+    date: 'Agustus 2026',
+    slug: 'nusa-quest',
+    pptLink:"https://canva.link/yaffeyh2xixsyfc",
+    link: "https://www.nusaquest.web.id/",
+    github: 'https://github.com/barastrong/nusaexplore',
+    tags: ['React JS','CSS Style','Supabase','Node JS', 'express JS', 'REST API'],
+    fitures: [ 'Interactive Indonesia Map (34 Provinces)', 'Province Detail Information (Culture, Tourism, Culinary)', 'Map-Based Unlock Exploration System', 'Mini Games (Quiz Budaya & Puzzle Nusantara)', 'Reward & Key System', 'Progress Tracking with LocalStorage', 'Dark / Light Mode Toggle', 'Responsive Design (Mobile-Friendly)', 'Smooth Animations & Scroll Effects']
+  },
   {
     title: 'Website NusaExplore',
     shortDesc: 'Platform interaktif untuk menjelajahi kekayaan budaya Indonesia melalui peta digital, mini games edukatif, dan sistem eksplorasi berbasis progress.',

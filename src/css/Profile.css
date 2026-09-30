@@ -203,7 +203,7 @@
   }
 
   .profile-card {
-    padding: 3rem 2rem;
+    padding: 3rem 1.25rem 2.5rem;
   }
 
   .profile-image-wrapper {
@@ -229,5 +229,26 @@
     font-size: 1.4rem;
     width: 48px;
     height: 48px;
+  }
+}
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none), (pointer: coarse) {
+  .profile-card:hover {
+    transform: none;
+    box-shadow: 6px 6px 0px var(--border-color, #2D2D2D);
+  }
+  .profile-social-links a:hover,
+  .profile-social-links a.linkedin:hover,
+  .profile-social-links a.github:hover,
+  .profile-social-links a.instagram:hover {
+    transform: none;
+    box-shadow: 3px 3px 0px var(--border-color, #2D2D2D);
+  }
+  .profile-cta-btn:hover {
+    transform: none;
+    box-shadow: 4px 4px 0px var(--border-color, #2D2D2D);
+    background: var(--sky-blue, #4ECDC4);
+    color: white;
   }
 }

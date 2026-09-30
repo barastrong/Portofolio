@@ -133,3 +133,22 @@
   box-shadow: 2px 2px 0px var(--border-color, #2D2D2D);
   border-color: var(--border-color, #2D2D2D);
 }
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none), (pointer: coarse) {
+  .certificate-card:hover {
+    transform: none;
+    box-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
+    z-index: 1;
+  }
+  .certificate-card:hover .certificate-card-image {
+    transform: none;
+  }
+  .list-item:hover {
+    background: #E8FFF0;
+    color: var(--mint-dark, #55B563);
+    transform: none;
+    box-shadow: none;
+    border-color: var(--mint, #6BCB77);
+  }
+}

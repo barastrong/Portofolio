@@ -4,6 +4,12 @@
   padding: 120px 2rem 4rem;
 }
 
+@media (max-width: 768px) {
+  .project-page-container {
+    padding: 96px 1rem 3rem;
+  }
+}
+
 .project-page-header {
   max-width: 800px;
   margin: 0 auto 4rem;

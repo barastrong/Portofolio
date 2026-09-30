@@ -1,12 +1,14 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion'; 
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion'; 
 import '../css/navbar.css';
 import { 
   FaHome, 
   FaAward,
   FaLaptopCode,
-  FaUserCircle
+  FaUserCircle,
+  FaBars,
+  FaTimes
 } from 'react-icons/fa';
 
 interface NavItem {
@@ -54,6 +56,13 @@ const menuItemVariants = {
 };
 
 const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   return (
     <motion.nav 
       className="navbar"
@@ -64,6 +73,38 @@ const Navbar: React.FC = () => {
       <motion.div className="navbar-title" variants={menuItemVariants}>
         <NavLink to="/">Dev.ops</NavLink>
       </motion.div>
+
+      <button
+        className={`hamburger ${isOpen ? 'open' : ''}`}
+        onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
+        aria-expanded={isOpen}
+      >
+        {isOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="mobile-menu"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+          >
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) => (isActive ? 'active' : '')}
+              >
+                <item.Icon />
+                <span className="nav-label">{item.label}</span>
+              </NavLink>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <motion.div 
         className="navbar-menu"
@@ -77,6 +118,7 @@ const Navbar: React.FC = () => {
               title={item.label}
             >
               <item.Icon />
+              <span className="nav-label">{item.label}</span>
             </NavLink>
           </motion.div>
         ))}

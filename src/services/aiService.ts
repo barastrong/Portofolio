@@ -99,6 +99,6 @@ export const runChat = async (userInput: string, history: { role: string, parts:
     return result.response.text();
   } catch (error) {
     console.error("Error saat berkomunikasi dengan Gemini:", error);
-    return "Maaf, sepertinya ada sedikit kendala di pihak saya. Silakan coba lagi nanti.";
+    return "Maaf, sepertinya ada sedikit kendala di pihak kami. Silakan coba lagi nanti.";
   }
 };
