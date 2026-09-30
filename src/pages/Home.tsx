@@ -193,7 +193,7 @@ const Home: React.FC = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.h2 className="section-title" variants={gridItemVariants}>Proyek <span>Terbaru</span></motion.h2>
+        <motion.h2 className="section-title" variants={gridItemVariants}>Project <span>Terbaru</span></motion.h2>
         <motion.div className="projects-grid" variants={sectionVariants}>
           {projectsData.slice(0, 3).map(project => (
             <ProjectCard
@@ -211,7 +211,6 @@ const Home: React.FC = () => {
         </motion.div>
       </motion.section>
 
-      {/* GitHub Contributions Section */}
       <motion.section
         className="page-section"
         variants={sectionVariants}

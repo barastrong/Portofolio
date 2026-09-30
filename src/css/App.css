@@ -100,6 +100,63 @@
   box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+.btn {
+  touch-action: manipulation;
+}
+
+/* Tap-to-zoom affordance badge (muncul saat hover, selalu terlihat di layar sentuh) */
+.zoom-badge {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--bg-white, #FFFFFF);
+  color: var(--text-dark, #2D2D2D);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  border: 2.5px solid var(--border-color, #2D2D2D);
+  box-shadow: 2px 2px 0px var(--border-color, #2D2D2D);
+  font-size: 0.78rem;
+  font-weight: 800;
+  font-family: var(--font-body, 'Nunito');
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card-image-wrapper .zoom-badge,
+.certificate-card-image-wrapper .zoom-badge {
+  bottom: 0.75rem;
+  right: 0.75rem;
+}
+
+.detail-page-image-wrapper .zoom-badge,
+.documentation-image-wrapper .zoom-badge {
+  top: 0.9rem;
+  right: 0.9rem;
+}
+
+.project-card-image-wrapper:hover .zoom-badge,
+.certificate-card-image-wrapper:hover .zoom-badge,
+.detail-page-image-wrapper:hover .zoom-badge,
+.documentation-image-wrapper:hover .zoom-badge {
+  opacity: 1;
+}
+
+/* Tidak ada hover = selalu tampilkan petunjuk tap */
+@media (hover: none) {
+  .zoom-badge {
+    opacity: 1;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -137,6 +194,12 @@ body::before {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding: 0.75rem;
+  }
 }
 
 /* Headings */
@@ -193,4 +256,23 @@ button:focus,
 button:focus-visible {
   outline: 3px solid var(--coral);
   outline-offset: 2px;
+}
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none), (pointer: coarse) {
+  button:hover {
+    transform: none;
+    box-shadow: var(--cartoon-shadow-sm);
+  }
+  a:hover {
+    color: var(--coral);
+  }
+}
+
+/* ===== KURANGI MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  .hero-image-wrapper::before,
+  .profile-image-wrapper::before {
+    animation: none;
+  }
 }

@@ -1,5 +1,3 @@
-/* ===== CARTOON PROJECT CARD ===== */
-
 .project-card {
   background: var(--card-bg, #FFFFFF);
   border-radius: 20px;
@@ -185,4 +183,28 @@
 .project-card .btn-secondary span {
   position: relative;
   z-index: 1;
+}
+
+/* ===== TOUCH DEVICES ===== */
+/* Matikan hover-lift & image-zoom yang lengket di layar sentuh */
+@media (hover: none), (pointer: coarse) {
+  .project-card:hover {
+    transform: none;
+    box-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
+  }
+  .project-card:hover .project-card-image {
+    transform: none;
+  }
+  .tag:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .project-card .btn:hover {
+    transform: none;
+    box-shadow: 3px 3px 0px var(--border-color, #2D2D2D);
+    background: var(--bg-white, #FFFFFF);
+  }
+  .project-card:hover {
+    z-index: 1;
+  }
 }

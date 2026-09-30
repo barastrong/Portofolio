@@ -253,6 +253,29 @@
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 399px) {
+  .page-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-container {
+    padding-top: 100px;
+    min-height: auto;
+    gap: 2rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .hero-container {
+    padding-top: 120px;
+    min-height: auto;
+  }
+}
+
 @media (min-width: 500px) {
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -441,8 +464,46 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .github-contributions-wrapper {
+    padding: 1.25rem 1rem;
+  }
+
+  .github-contrib-btn {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.82rem;
+  }
+}
+
 @media (min-width: 768px) {
   .github-contributions-wrapper {
     padding: 2rem 2.5rem;
+  }
+}
+
+/* ===== TOUCH DEVICES ===== */
+@media (hover: none), (pointer: coarse) {
+  .skill-card:hover {
+    transform: none;
+    box-shadow: 4px 4px 0px var(--border-color, #2D2D2D);
+  }
+  .skill-card:hover svg {
+    transform: none;
+  }
+  .btn-primary:hover {
+    transform: none;
+    box-shadow: 4px 4px 0px var(--border-color, #2D2D2D);
+    background: var(--coral, #FF6B6B);
+    color: white;
+  }
+  .btn-secondary:hover {
+    transform: none;
+    box-shadow: 4px 4px 0px var(--border-color, #2D2D2D);
+    background: var(--bg-white, #FFFFFF);
+    color: var(--text-dark, #2D2D2D);
+  }
+  .github-contrib-btn.btn-secondary:hover {
+    background: var(--bg-white, #FFFFFF);
+    color: var(--text-dark, #2D2D2D);
   }
 }

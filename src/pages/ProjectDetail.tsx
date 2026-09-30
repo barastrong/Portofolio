@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaCalendarAlt, FaBook, FaBolt, FaCamera } from 'react-icons/fa';
+import { FaArrowLeft, FaCalendarAlt, FaBook, FaBolt, FaCamera, FaSearchPlus, FaGithub, FaFilePowerpoint, FaLink, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 import projectsData from '../data/projectData';
 import '../css/ProjectDetail.css';
@@ -32,30 +32,38 @@ const modalVariants = {
 const ProjectDetail: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
-  const [expandedImage, setExpandedImage] = useState<string | null>(null);
+  const [imageIndex, setImageIndex] = useState<number | null>(null);
   const project = projectsData.find(p => p.slug === slug);
 
   const handleBack = () => navigate(-1);
-  const handleOpenImage = (imageUrl: string) => setExpandedImage(imageUrl);
-  const handleCloseImage = () => setExpandedImage(null);
+  const gallery = project ? [project.image, ...(project.documentation ?? [])] : [];
+
+  const handleOpenImage = (imageUrl: string) => {
+    const idx = gallery.indexOf(imageUrl);
+    setImageIndex(idx);
+  };
+  const handleCloseImage = () => setImageIndex(null);
+  const prevImage = () => setImageIndex(prev => (prev === null ? prev : (prev - 1 + gallery.length) % gallery.length));
+  const nextImage = () => setImageIndex(prev => (prev === null ? prev : (prev + 1) % gallery.length));
 
   useEffect(() => {
-    const handleEscKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        handleCloseImage();
-      }
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') handleCloseImage();
+      if (event.key === 'ArrowLeft') prevImage();
+      if (event.key === 'ArrowRight') nextImage();
     };
 
-    if (expandedImage) {
+    if (imageIndex !== null) {
       document.body.style.overflow = 'hidden';
-      document.addEventListener('keydown', handleEscKey);
+      document.addEventListener('keydown', handleKey);
     }
 
     return () => {
       document.body.style.overflow = 'auto';
-      document.removeEventListener('keydown', handleEscKey);
+      document.removeEventListener('keydown', handleKey);
     };
-  }, [expandedImage]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [imageIndex, gallery.length]);
 
   if (!project) {
     return (
@@ -78,8 +86,11 @@ const ProjectDetail: React.FC = () => {
           animate="visible"
         >
           <motion.header className="detail-page-header" variants={itemVariants}>
+            <span className="detail-kicker">✦ Portofolio Proyek</span>
             <h1 className="detail-page-title">{project.title}</h1>
-            <p className="detail-page-date"><FaCalendarAlt style={{ marginRight: '0.5rem', color: '#3B82F6' }} /> {project.date}</p>
+            <p className="detail-page-date">
+              <FaCalendarAlt /> {project.date}
+            </p>
             <div className="detail-page-tags">
               {project.tags.map((tag) => (
                 <span key={tag} className="detail-page-tag">{tag}</span>
@@ -93,11 +104,13 @@ const ProjectDetail: React.FC = () => {
               <p>{project.longDesc}</p>
             </div>
             <div className="detail-page-image-wrapper">
+              <span className="zoom-badge"><FaSearchPlus /> Zoom</span>
               <img
                 src={project.image}
                 alt={project.title}
                 className="detail-page-image"
                 onClick={() => handleOpenImage(project.image)}
+                onError={(e) => (e.currentTarget.style.display = 'none')}
               />
             </div>
           </motion.div>
@@ -108,7 +121,7 @@ const ProjectDetail: React.FC = () => {
               <div className="features-grid">
                 {project.fitures.map((fitur, index) => (
                   <div key={index} className="feature-card">
-                    <span className="feature-icon">✓</span>
+                    <span className="feature-icon">{index + 1}</span>
                     <p>{fitur}</p>
                   </div>
                 ))}
@@ -118,18 +131,20 @@ const ProjectDetail: React.FC = () => {
 
           {project.documentation && project.documentation.length > 0 && (
             <motion.section className="documentation-section" variants={itemVariants}>
-              <h3 className="section-heading"><FaCamera style={{ marginRight: '0.5rem', color: '#8B5CF6' }} /> Dokumentasi Proyek</h3>
+              <h3 className="section-heading"><FaCamera style={{ marginRight: '0.5rem', color: '#8B5CF6' }} /> Dokumentasi Proyek <span className="doc-count">{project.documentation.length} gambar</span></h3>
               <p className="documentation-description">
                 Berikut adalah dokumentasi visual dari proyek ini untuk memberikan gambaran lebih jelas tentang tampilan dan fitur-fiturnya.
               </p>
               <div className="documentation-grid">
                 {project.documentation.map((docImage, index) => (
                   <div key={index} className="documentation-image-wrapper">
+                    <span className="zoom-badge"><FaSearchPlus /> Zoom</span>
                     <img
                       src={docImage}
                       alt={`${project.title} documentation ${index + 1}`}
                       className="documentation-image"
                       onClick={() => handleOpenImage(docImage)}
+                      onError={(e) => (e.currentTarget.style.display = 'none')}
                     />
                   </div>
                 ))}
@@ -137,15 +152,32 @@ const ProjectDetail: React.FC = () => {
             </motion.section>
           )}
 
-          <motion.div className="detail-back-button-wrapper" variants={itemVariants}>
-            <button onClick={handleBack} className="btn btn-secondary">
+          <div className="detail-social-buttons">
+            {project.github && (
+              <a href={project.github} className="btn btn-secondary detail-social-btn" target="_blank" rel="noopener noreferrer">
+                <FaGithub /> GitHub
+              </a>
+            )}
+            {project.pptLink && (
+              <a href={project.pptLink} className="btn btn-secondary detail-social-btn" target="_blank" rel="noopener noreferrer">
+                <FaFilePowerpoint /> Presentasi
+              </a>
+            )}
+            {project.link && (
+              <a href={project.link} className="btn btn-secondary detail-social-btn" target="_blank" rel="noopener noreferrer">
+                <FaLink /> Link
+              </a>
+            )}
+          </div>
+          <div className="detail-back-button-wrapper">
+            <button onClick={handleBack} className="btn btn-primary back-btn">
               <FaArrowLeft /> Kembali
             </button>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
 
-      {expandedImage && (
+      {imageIndex !== null && (
         <motion.div
           className="image-modal-overlay"
           onClick={handleCloseImage}
@@ -155,30 +187,22 @@ const ProjectDetail: React.FC = () => {
           exit="exit"
           transition={{ duration: 0.3 }}
         >
-          <button
-            onClick={handleCloseImage}
-            aria-label="Close image"
-            style={{
-              position: 'fixed',
-              top: '20px',
-              right: '20px',
-              background: 'none',
-              border: 'none',
-              color: 'white',
-              fontSize: '2rem',
-              cursor: 'pointer',
-              lineHeight: 1,
-              zIndex: 1010
-            }}
-          >
+          <span className="modal-counter">{imageIndex + 1} / {gallery.length}</span>
+          <button className="modal-close-btn" onClick={(e) => { e.stopPropagation(); handleCloseImage(); }} aria-label="Close image">
             &times;
           </button>
+          <button className="modal-nav-btn modal-prev" onClick={(e) => { e.stopPropagation(); prevImage(); }} aria-label="Gambar sebelumnya">
+            <FaChevronLeft size={20} />
+          </button>
           <img
-            src={expandedImage}
+            src={gallery[imageIndex]}
             alt="Enlarged view"
             className="image-modal-content"
             onClick={(e) => e.stopPropagation()}
           />
+          <button className="modal-nav-btn modal-next" onClick={(e) => { e.stopPropagation(); nextImage(); }} aria-label="Gambar berikutnya">
+            <FaChevronRight size={20} />
+          </button>
         </motion.div>
       )}
     </>
