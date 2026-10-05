@@ -140,6 +140,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.55rem 1.2rem;
+  min-height: 44px;
   border-radius: 9999px;
   font-size: 0.88rem;
   font-weight: 800;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Outlet, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet, Link, useLocation } from 'react-router-dom';
 import Navbar from './components/navbar';
 import { useEffect } from 'react';
 import Home from './pages/Home';
@@ -15,6 +15,17 @@ const MainLayout = () => (
     <main>
       <Outlet />
     </main>
+  </div>
+);
+
+const NotFound = () => (
+  <div className="notfound">
+    <p className="notfound-code">404</p>
+    <h1 className="notfound-title">Halaman Tidak Ditemukan</h1>
+    <p className="notfound-text">
+      Maaf, halaman yang kamu cari tidak ada atau sudah dipindahkan.
+    </p>
+    <Link to="/" className="btn btn-primary">Kembali ke Home</Link>
   </div>
 );
 
@@ -39,6 +50,7 @@ function App() {
           <Route path="/project" element={<Project />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/project/:slug" element={<ProjectDetail />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
       <Chatbot />

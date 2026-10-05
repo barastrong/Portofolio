@@ -258,6 +258,41 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
+/* ===== 404 ===== */
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 7rem 1.5rem 4rem;
+  text-align: center;
+}
+
+.notfound-code {
+  font-family: var(--font-heading, 'Fredoka');
+  font-size: clamp(5rem, 22vw, 10rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--coral, #FF6B6B);
+  text-shadow: 5px 5px 0px var(--border-color, #2D2D2D);
+}
+
+.notfound-title {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  color: var(--heading-color, #2D2D2D);
+  font-family: var(--font-heading, 'Fredoka');
+}
+
+.notfound-text {
+  color: var(--text-body, #4A4A4A);
+  font-size: 1rem;
+  max-width: 420px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
 /* ===== TOUCH DEVICES ===== */
 @media (hover: none), (pointer: coarse) {
   button:hover {

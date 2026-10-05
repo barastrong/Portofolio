@@ -13,6 +13,7 @@ import EFELevel1 from '../assets/images/Cert_EFEBasic1.webp'
 import EFELevel2 from '../assets/images/Cert_EFEBasic2.webp'
 import WebDev2 from '../assets/images/Cert__Webdev2.webp';
 import EFELevel3 from '../assets/images/Cert_EFEBasic3.webp';
+import infinetera from '../assets/images/Cert_Infinetera.webp';
 
 
 
@@ -26,6 +27,14 @@ export interface CertificateData {
 }
 
 const certificateData: CertificateData[] = [
+    {
+    date: 'Agustus 2026',
+    image: infinetera,
+    title: 'Web Development',
+    course: 'UNISSULA',
+    description: 'Sertifikat penyelesaian program pembelajaran Bahasa Inggris tingkat Adult Level 3 dengan total 24 jam pembelajaran. Fokus pembelajaran meliputi lanjutan grammar, vocabulary, conversation practice, serta penguatan kepercayaan diri dalam komunikasi Bahasa Inggris.',
+    list: ['Express JS', 'React JS', 'API', 'Supabase']
+  },
   {
     date: 'May 2026',
     image: EFELevel3,
