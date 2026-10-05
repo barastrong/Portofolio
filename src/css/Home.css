@@ -93,6 +93,7 @@
 
 .btn {
   padding: 0.9rem 2rem;
+  min-height: 44px;
   border-radius: 9999px;
   text-decoration: none;
   font-weight: 800;

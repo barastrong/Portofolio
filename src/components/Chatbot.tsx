@@ -98,7 +98,14 @@ const Chatbot = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        <motion.button className="chatbot-toggle-btn" onClick={() => setIsOpen(!isOpen)} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <motion.button
+          className="chatbot-toggle-btn"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Tutup asisten AI' : 'Buka asisten AI'}
+          aria-expanded={isOpen}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
           {isOpen ? <IoClose size={28} /> : <IoChatbubbleEllipses size={28} />}
         </motion.button>
       </div>

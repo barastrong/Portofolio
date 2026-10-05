@@ -125,7 +125,7 @@
   line-height: 1.8;
   color: var(--text-body, #4A4A4A);
   margin: 0;
-  text-align: justify;
+  text-align: left;
   font-weight: 500;
 }
 
