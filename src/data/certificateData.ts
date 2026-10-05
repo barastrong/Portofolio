@@ -13,7 +13,7 @@ import EFELevel1 from '../assets/images/Cert_EFEBasic1.webp'
 import EFELevel2 from '../assets/images/Cert_EFEBasic2.webp'
 import WebDev2 from '../assets/images/Cert__Webdev2.webp';
 import EFELevel3 from '../assets/images/Cert_EFEBasic3.webp';
-import infinetera from '../assets/images/Cert_Infinetera.webp';
+import infinetera from '../assets/images/Cert_infinetera.webp';
 
 
 
