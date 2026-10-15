@@ -23,10 +23,6 @@ a:hover {
   color: var(--coral-dark, #E85555);
 }
 
-a:visited {
-  color: #9B5C7D;
-}
-
 body {
   margin: 0;
   display: flex;
