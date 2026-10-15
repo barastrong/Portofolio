@@ -6,17 +6,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  --coral: #FF6B6B;
+  --coral-dark: #E85555;
+  --coral-text: #D63D3D;
 }
 
 a {
   font-weight: 700;
-  color: var(--coral, #FF6B6B);
+  color: var(--coral-text, #D63D3D);
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   color: var(--coral-dark, #E85555);
+}
+
+a:visited {
+  color: #9B5C7D;
 }
 
 body {

@@ -13,10 +13,11 @@
   --bg-white: #FFFFFF;
   --bg-pattern: #FFF3D6;
 
-  /* Primary Colors */
-  --coral: #FF6B6B;
-  --coral-dark: #E85555;
-  --sky-blue: #4ECDC4;
+   /* Primary Colors */
+   --coral: #D63D3D;
+   --coral-dark: #E85555;
+   --coral-text: #D63D3D;
+   --sky-blue: #4ECDC4;
   --sky-blue-dark: #3BB5AD;
   --lavender: #A78BFA;
   --lavender-dark: #8B6FE0;
@@ -218,13 +219,17 @@ h1 {
 /* Links */
 a {
   font-weight: 600;
-  color: var(--coral);
+  color: var(--coral-text, #D63D3D);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--coral-dark);
+  color: var(--coral-dark, #E85555);
+}
+
+a:visited {
+  color: #9B5C7D;
 }
 
 /* Buttons */
@@ -309,5 +314,10 @@ button:focus-visible {
   .hero-image-wrapper::before,
   .profile-image-wrapper::before {
     animation: none;
+  }
+  
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }

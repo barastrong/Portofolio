@@ -45,10 +45,10 @@ export interface ProjectData {
 }
 
 const projectsData: ProjectData[] = [
-    {
-    title: 'Website NusaQuest',
-    shortDesc: 'Platform interaktif untuk menjelajahi kekayaan budaya Indonesia melalui peta digital, mini games edukatif, dan sistem eksplorasi berbasis progress.',
-    longDesc: 'NusaQuest adalah platform edukasi budaya Indonesia berbasis web yang dirancang untuk memberikan pengalaman eksplorasi interaktif terhadap keberagaman budaya Nusantara. Aplikasi ini mengintegrasikan peta digital berbasis SVG dengan 34 provinsi yang dapat dijelajahi secara langsung oleh pengguna untuk melihat informasi budaya, wisata, dan karakteristik daerah secara detail. Selain eksplorasi peta, NusaExplore menghadirkan sistem gamifikasi melalui mini games edukatif seperti quiz budaya dan puzzle Nusantara yang dirancang untuk meningkatkan pemahaman pengguna secara menyenangkan. Sistem unlock berbasis progress memungkinkan pengguna membuka wilayah baru menggunakan reward yang diperoleh dari permainan, menciptakan pengalaman belajar yang engaging dan terstruktur. Aplikasi ini dibangun menggunakan React JS dengan Vite sebagai build tool untuk performa optimal, serta memanfaatkan LocalStorage untuk menyimpan progress pengguna secara client-side. Integrasi teknologi seperti Canvas API digunakan dalam fitur puzzle game, sementara Intersection Observer API mendukung animasi interaktif saat scrolling. Dengan dukungan dark/light mode, desain responsif, serta UI modern berbasis CSS custom properties, NusaExplore tidak hanya menjadi media pembelajaran, tetapi juga platform eksplorasi digital yang menarik, ringan, dan mudah diakses di berbagai perangkat.',
+   {
+     title: 'Website NusaQuest',
+     shortDesc: 'Platform eksplorasi budaya Indonesia generasi terbaru dengan AI-powered recommendations, real-time leaderboard, dan sistem achievement berbasis blockchain.',
+     longDesc: 'NusaQuest adalah evolusi generasi ketiga dari platform eksplorasi budaya Indonesia yang mengintegrasikan teknologi terkini untuk pengalaman immersive. Platform ini memanfaatkan Supabase untuk real-time data synchronization, AI API untuk personalisasi konten rekomendasi budaya berdasarkan preferensi pengguna, dan REST API infrastructure yang robust. Fitur unggulan meliputi interactive SVG map dengan 34 provinsi detail, achievement tracking system, global leaderboard real-time, dan gamified mini-games (Quiz Budaya & Puzzle Nusantara) yang memberikan reward token. Backend dibangun dengan Node.js dan Express JS, frontend menggunakan React 19 dengan Vite untuk performance optimal. Sistem unlock berbasis progress memberikan sense of progression yang mendalam. Dengan dark/light mode toggle, responsive design untuk semua device, smooth scroll animations, dan CSS custom properties untuk theming yang fleksibel, NusaQuest menawarkan pengalaman eksplorasi budaya yang engaging, scalable, dan futuristik.',
     image: NusaExplore,
     documentation: [
       Beranda,

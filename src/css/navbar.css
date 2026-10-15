@@ -69,7 +69,7 @@
 }
 
 .nav-label {
-  font-size: 0.58rem;
+  font-size: 0.75rem;
   font-weight: 800;
   font-family: var(--font-body, 'Nunito');
   letter-spacing: 0.04em;

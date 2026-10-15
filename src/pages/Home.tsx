@@ -133,6 +133,9 @@ const Home: React.FC = () => {
               repeatType: 'reverse',
               ease: 'easeInOut',
             }}
+            style={{
+              willChange: 'transform'
+            }}
           />
         </motion.div>
       </section>
@@ -151,7 +154,7 @@ const Home: React.FC = () => {
             { Icon: SiMysql, name: 'MySQL', color: '#4479A1' },
             { Icon: FaReact, name: 'React JS', color: '#61DAFB' },
             { Icon: FaReact, name: 'React Native', color: '#61DAFB' },
-            { Icon:FaGithub, name:'Github', color: '#181717' }
+            { Icon: FaGithub, name: 'GitHub', color: '#181717' }
           ].map(skill => (
             <motion.div className="skill-card" key={skill.name} variants={gridItemVariants}>
               <skill.Icon style={{ color: skill.color }} />

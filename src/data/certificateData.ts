@@ -32,7 +32,7 @@ const certificateData: CertificateData[] = [
     image: infinetera,
     title: 'Web Development',
     course: 'UNISSULA',
-    description: 'Sertifikat penyelesaian program pembelajaran Bahasa Inggris tingkat Adult Level 3 dengan total 24 jam pembelajaran. Fokus pembelajaran meliputi lanjutan grammar, vocabulary, conversation practice, serta penguatan kepercayaan diri dalam komunikasi Bahasa Inggris.',
+    description: 'Sertifikat penyelesaian program Web Development dari UNISSULA dengan fokus pengembangan aplikasi backend dan integrasi API. Program mencakup penguasaan Express JS, React JS, REST API design, serta database management dengan Supabase untuk membangun aplikasi web full-stack yang scalable.',
     list: ['Express JS', 'React JS', 'API', 'Supabase']
   },
   {
