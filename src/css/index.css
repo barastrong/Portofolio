@@ -1,26 +1,22 @@
 :root {
-  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  line-height: 1.7;
-  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  --coral: #FF6B6B;
-  --coral-dark: #E85555;
-  --coral-text: #D63D3D;
 }
 
 a {
   font-weight: 700;
-  color: var(--coral-text, #D63D3D);
+  color: var(--secondary, #432DD7);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--coral-dark, #E85555);
+  color: var(--secondary-dark, #3320B0);
 }
 
 body {
@@ -37,43 +33,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Fredoka', 'Nunito', sans-serif;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--heading-color, #2D2D2D);
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--heading-color, #1C293C);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 9999px;
-  border: 3px solid #2D2D2D;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 700;
-  font-family: 'Nunito', sans-serif;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  background: white;
-  box-shadow: 3px 3px 0px #2D2D2D;
-}
-
-button:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0px #2D2D2D;
-}
-
-button:active {
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0px #2D2D2D;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 3px solid var(--coral, #FF6B6B);
-  outline-offset: 2px;
+button,
+input,
+textarea {
+  font-family: 'Inter', sans-serif;
 }

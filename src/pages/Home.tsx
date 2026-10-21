@@ -92,7 +92,7 @@ const GithubGraph: React.FC = () => {
         </div>
       )}
       <img
-        src={`https://ghchart.rshah.org/FF6B6B/barastrong`}
+        src={`https://ghchart.rshah.org/432DD7/barastrong`}
         alt="GitHub Contributions Chart barastrong"
         className={`github-chart-img ${loaded ? 'loaded' : 'loading'}`}
         onLoad={() => setLoaded(true)}

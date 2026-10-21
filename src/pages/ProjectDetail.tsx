@@ -67,7 +67,7 @@ const ProjectDetail: React.FC = () => {
 
   if (!project) {
     return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', color: 'white' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', color: 'var(--text-dark)' }}>
         <h2>404 - Proyek Tidak Ditemukan</h2>
         <button onClick={handleBack} className="btn btn-primary" style={{ marginTop: '2rem' }}>
           <FaArrowLeft /> Kembali
