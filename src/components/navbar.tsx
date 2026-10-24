@@ -1,91 +1,77 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion'; 
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaArrowRight, FaBars, FaTimes } from 'react-icons/fa';
 import '../css/navbar.css';
-import { 
-  FaHome, 
-  FaAward,
-  FaLaptopCode,
-  FaUserCircle,
-  FaBars,
-  FaTimes
-} from 'react-icons/fa';
 
-interface NavItem {
-  path: string;
-  label: string;
-  Icon: React.ElementType;
-}
-
-const navItems: NavItem[] = [
-  { path: '/', label: 'Home', Icon: FaHome },
-  { path: '/sertifikat', label: 'Sertifikat', Icon: FaAward  }, 
-  { path: '/project', label: 'Project', Icon: FaLaptopCode  },
-  { path: '/profile', label: 'Profile', Icon: FaUserCircle },
+const navItems = [
+  { to: '/#tentang', label: 'Tentang' },
+  { to: '/profile', label: 'Profil' },
+  { to: '/project', label: 'Proyek' },
+  { to: '/sertifikat', label: 'Sertifikat' },
+  { to: '/#skill', label: 'Skill' },
+  { to: '/#perjalanan', label: 'Perjalanan' },
+  { to: '/#kontak', label: 'Kontak' },
 ];
 
 const navbarVariants = {
   hidden: { y: -100, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1, 
-    transition: { 
-      duration: 0.5, 
-      ease: "easeOut",
-      delayChildren: 0.3 
-    } 
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, ease: 'easeOut' },
   },
 } as const;
 
-const menuContainerVariants = {
-  hidden: {}, 
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
-const menuItemVariants = {
-  hidden: { y: -20, opacity: 0 },
-  visible: { 
-    y: 0, 
-    opacity: 1,
-    transition: { duration: 0.3 }
-  },
-};
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     setIsOpen(false);
-  }, [location.pathname]);
+  }, [pathname, hash]);
 
   return (
-    <motion.nav 
+    <motion.nav
       className="navbar"
       variants={navbarVariants}
       initial="hidden"
       animate="visible"
     >
-      <motion.div className="navbar-title" variants={menuItemVariants}>
-        <NavLink to="/">Dev.ops</NavLink>
-      </motion.div>
+      <div className="navbar-inner">
+        <Link to="/" className="navbar-logo">
+          BINTANG.
+        </Link>
 
-      <button
-        className={`hamburger ${isOpen ? 'open' : ''}`}
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
-        aria-expanded={isOpen}
-      >
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
+        <div className="navbar-right">
+          <nav className="navbar-links" aria-label="Navigasi utama">
+            {navItems.map((item) => (
+              <Link key={item.to} to={item.to}>
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <Link to="/#kontak" className="btn btn-primary nav-cta">
+            Hubungi Saya <FaArrowRight />
+          </Link>
+        </div>
+
+        <button
+          className={`hamburger ${isOpen ? 'open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? 'Tutup menu' : 'Buka menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             className="mobile-menu"
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,36 +79,16 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.2, ease: 'easeOut' }}
           >
             {navItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={({ isActive }) => (isActive ? 'active' : '')}
-              >
-                <item.Icon />
-                <span className="nav-label">{item.label}</span>
-              </NavLink>
+              <Link key={item.to} to={item.to}>
+                {item.label}
+              </Link>
             ))}
+            <Link to="/#kontak" className="btn btn-primary mobile-cta">
+              Hubungi Saya <FaArrowRight />
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
-
-      <motion.div 
-        className="navbar-menu"
-        variants={menuContainerVariants}
-      >
-        {navItems.map((item) => (
-          <motion.div key={item.path} variants={menuItemVariants}>
-            <NavLink
-              to={item.path}
-              className={({ isActive }) => (isActive ? 'active' : '')}
-              title={item.label}
-            >
-              <item.Icon />
-              <span className="nav-label">{item.label}</span>
-            </NavLink>
-          </motion.div>
-        ))}
-      </motion.div>
     </motion.nav>
   );
 };
