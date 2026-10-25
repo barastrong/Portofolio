@@ -162,7 +162,6 @@ const Home: React.FC = () => {
               <span className="portrait-photo">
                 <img src={ProfileImage} alt="Bintang Bara Adyasta" />
               </span>
-              <span className="portrait-half" aria-hidden="true" />
               <span className="portrait-sticker">Bintang Bara Adyasta</span>
               <span className="portrait-chip">Backend + API</span>
             </Link>
