@@ -51,35 +51,49 @@ const marqueeItems = [
 const skills = [
   { category: 'Backend', name: 'Laravel', level: 88 },
   { category: 'Database', name: 'MySQL', level: 84 },
+  { category: 'Backend', name: 'REST API', level: 82 },
   { category: 'Backend', name: 'Node.js & Express', level: 70 },
-  { category: 'Frontend', name: 'React JS', level: 78 },
-  { category: 'Mobile', name: 'React Native', level: 62 },
-  { category: 'Frontend', name: 'HTML, CSS & JavaScript', level: 90 },
-  { category: 'Design', name: 'Figma', level: 82 },
+  { category: 'Frontend', name: 'HTML, CSS & JavaScript', level: 75 },
+  { category: 'Frontend', name: 'React JS', level: 60 },
+  { category: 'Design', name: 'Figma', level: 50 },
   { category: 'Tools', name: 'Git & GitHub', level: 80 },
 ];
 
 const journey = [
   {
+    period: '2022 — Sekarang',
+    title: 'SMK Telkom Sidoarjo',
+    subtitle: 'Fondasi coding lewat Timedoor Academy',
+    description:
+      'Dari logika pemrograman dasar, bikin game pakai JavaScript, sampai pengembangan web HTML, CSS, dan JavaScript. Mulai kursus Bahasa Inggris di EF juga.',
+  },
+  {
     period: '2025 — Sekarang',
-    title: 'Freelance Backend Developer',
-    subtitle: 'Proyek mandiri & klien UMKM',
+    title: 'Web Engineer (PKL)',
+    subtitle: 'PT Alpharich Digital Solution',
     description:
-      'Bikin API, database, dan dashboard sederhana. Dari desain alur data sampai siap dipakai.',
+      'PKL sebagai web engineer: ikut bangun dan rawat aplikasi web, dari API dan database sampai tampilan yang dipakai user.',
   },
   {
-    period: '2024 — 2025',
-    title: 'Peserta Lomba & Kelas Coding',
-    subtitle: 'Kompetisi dan kelas intensif',
+    period: '2026',
+    title: 'Lomba & Sertifikasi Lanjutan',
+    subtitle: 'UNISSULA, Soegijapranata, EFE',
     description:
-      'Ngasah skill backend, database, dan kerja tim lewat lomba dan kelas coding.',
+      'Sertifikasi Web Development UNISSULA (Express JS, React JS, Supabase), lomba web development Soegijapranata, dan English Program EFE sampai Level 3.',
   },
   {
-    period: '2022 — 2024',
+    period: '2025',
+    title: 'Eksplorasi Frontend, Mobile & AI',
+    subtitle: 'Timedoor, IDN, Mereka, ID-Networkers',
+    description:
+      'Belajar Vue JS, React Native, Azure AI-900, dan networking, plus ikut lomba web development IDN Boarding School.',
+  },
+  {
+    period: '2019 — 2022',
     title: 'Mulai Belajar Web',
-    subtitle: 'Otodidak dan belajar di sekolah',
+    subtitle: 'SMP, berawal dari rasa penasaran',
     description:
-      'Kenalan sama HTML, CSS, JavaScript dan bikin proyek-proyek kecil pertama.',
+      'Penasaran bagaimana sebuah website bisa dibuat, lalu belajar HTML, CSS, JavaScript dan bikin proyek-proyek kecil pertama.',
   },
 ];
 
@@ -88,7 +102,7 @@ const projectShortNames = ['NusaQuest', 'NusaExplore', 'Smart Report'];
 
 const stats = [
   { value: `${projectsData.length}+`, label: 'Proyek selesai' },
-  { value: '4+ th', label: 'Belajar & berkarya' },
+  { value: '7 th', label: 'Belajar & berkarya' },
   { value: '100%', label: 'Fokus backend & API' },
 ];
 

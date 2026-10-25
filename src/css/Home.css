@@ -674,8 +674,7 @@
   white-space: nowrap;
 }
 
-.timeline-row:nth-child(2) .timeline-period,
-.timeline-row:nth-child(3) .timeline-period {
+.timeline-row:nth-child(n + 2) .timeline-period {
   background: var(--bg-white);
 }
 

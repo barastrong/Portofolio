@@ -49,11 +49,11 @@ const Profile: React.FC = () => {
           </motion.h1>
 
           <motion.h2 className="profile-title" variants={itemVariants}>
-            Backend Developer
+            Web Engineer · Backend Focus
           </motion.h2>
 
           <motion.p className="about-me-text" variants={itemVariants}>
-            Sebagai seorang Backend Developer. Saya percaya bahwa di balik setiap aplikasi yang hebat, terdapat arsitektur digital yang elegan dan andal. Saya bersemangat untuk merancang, mengembangkan, dan memelihara kode-kode pemrograman yang berhubungan dengan server, database, serta mengelola API (Application Programming Interface). Selain itu juga meningkatkan performa serta keamanan sistem agar aplikasi dapat berjalan dengan lancar, aman dan efisien.
+            Semuanya mulai dari rasa penasaran. Tahun 2019, waktu masih SMP, saya ingin tahu bagaimana sebuah website bisa dibuat — dan rasa penasaran itu yang membawa saya lanjut ke SMK Telkom Sidoarjo sampai sekarang. Fokus saya di backend: merancang API, database, dan alur data yang aman, cepat, dan mudah dirawat. Frontend dan Figma saya kuasai secukupnya untuk mendukung pekerjaan itu, karena bagi saya sistem yang baik harus benar dulu di balik layarnya.
           </motion.p>
           
           <motion.div className="profile-social-links" variants={itemVariants}>
