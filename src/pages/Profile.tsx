@@ -87,7 +87,7 @@ const Profile: React.FC = () => {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <a href="mailto:bintangbara23@gmail.com" className="profile-cta-btn">
+            <a href="mailto:gamasaw@gmail.com" className="profile-cta-btn">
               <FaEnvelope /> Hubungi Saya
             </a>
           </motion.div>

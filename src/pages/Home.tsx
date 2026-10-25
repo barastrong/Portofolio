@@ -395,7 +395,7 @@ const Home: React.FC = () => {
             </p>
 
             <div className="contact-actions">
-              <a href="mailto:bintangbara23@gmail.com" className="btn btn-primary">
+              <a href="mailto:gamasaw@gmail.com" className="btn btn-primary">
                 <FaEnvelope /> Kirim Email <FaArrowRight />
               </a>
               <a
@@ -414,7 +414,6 @@ const Home: React.FC = () => {
               >
                 <FaGithub /> GitHub
               </a>
-              <span className="contact-email">bintangbara23@gmail.com</span>
             </div>
           </div>
         </div>
@@ -422,7 +421,14 @@ const Home: React.FC = () => {
 
       <footer className="site-footer">
         <div className="landing-container footer-inner">
-          <p>© 2026 Bintang. Dibuat pakai Figma &amp; kopi.</p>
+          <div className="footer-brand">
+            <Link to="/" className="footer-logo">BINTANG.</Link>
+            <p>
+              Backend developer yang bikin sistem aman, cepat, dan gampang
+              dirawat — dari alur data sampai siap dipakai.
+            </p>
+          </div>
+
           <nav className="footer-links" aria-label="Navigasi footer">
             <a href="/#tentang">Tentang</a>
             <a href="/#proyek">Proyek</a>
@@ -430,6 +436,30 @@ const Home: React.FC = () => {
             <a href="/#skill">Skill</a>
             <a href="/#kontak">Kontak</a>
           </nav>
+
+          <div className="footer-socials">
+            <a
+              href="https://github.com/barastrong"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://linkedin.com/in/bintangbaraadyasta"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+        </div>
+
+        <div className="landing-container footer-bottom">
+          <p>© 2026 Bintang Bara Adyasta. Dibuat pakai Figma &amp; kopi.</p>
+          <a href="#" className="footer-top">Kembali ke atas ↑</a>
         </div>
       </footer>
     </motion.div>
